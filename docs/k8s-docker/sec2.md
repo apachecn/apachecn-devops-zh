@@ -4,6 +4,6 @@
 
 这本书的这一部分包括以下几章:
 
-*   [*第 4 章*](04.html#_idTextAnchor083) *，使用 KinD* 部署库本内特集群
+*   [*第 4 章*](04.html#_idTextAnchor083) *，使用 KinD* 部署Kubernetes集群
 *   [*【第 5 章】*](05.html#_idTextAnchor150) *，*三重船场
 *   [*第 6 章*](06.html#_idTextAnchor174) *、服务、负载平衡器和外部域名系统*
