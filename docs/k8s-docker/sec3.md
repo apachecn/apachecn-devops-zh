@@ -9,10 +9,10 @@
 这本书的这一部分包括以下几章:
 
 *   [*第 7 章*](07.html#_idTextAnchor203) *，将认证整合到您的集群中*
-*   [*第八章*](08.html#_idTextAnchor228) *，部署安全的Kubernetes仪表盘*
+*   [*第八章*](08.html#_idTextAnchor228) *，部署安全的 Kubernetes 仪表盘*
 *   [*第九章*](09.html#_idTextAnchor246)*【RBAC 策略与审计】*
 *   [*第 10 章*](10.html#_idTextAnchor260) *，创建 Pod 安全策略*
 *   [*第 11 章*](11.html#_idTextAnchor272) *，使用开放策略代理扩展安全性*
-*   [*第十二章*](12.html#_idTextAnchor295) *、审计使用Falco和 EFK*
+*   [*第十二章*](12.html#_idTextAnchor295) *、审计使用 Falco 和 EFK*
 *   [*第 13 章*](13.html#_idTextAnchor314) *，备份工作负载*
 *   [*第十四章*](14.html#_idTextAnchor337) *，供应平台*
