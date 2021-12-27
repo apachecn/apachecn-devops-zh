@@ -8,5 +8,5 @@
 
 本节包含以下章节:
 
-*   *第 1 章，容器和Kubernetes介绍*
+*   *第 1 章，容器和 Kubernetes 介绍*
 *   *第 2 章，Azure Kubernetes 服务入门*

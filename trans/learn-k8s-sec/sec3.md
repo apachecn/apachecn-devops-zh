@@ -5,4 +5,4 @@
 本节包括以下章节:
 
 *   [*第 12 章*](12.html#_idTextAnchor369)*分析和检测密码挖掘攻击*
-*   [*第十三章*](13.html#_idTextAnchor409)*向Kubernetes学习 CVEs*
+*   [*第十三章*](13.html#_idTextAnchor409)*向 Kubernetes 学习 CVEs*

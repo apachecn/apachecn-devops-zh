@@ -4,7 +4,7 @@
 
 本节包括以下章节:
 
-*第一章，了解Kubernetes和Helm*
+*第一章，了解 Kubernetes 和 Helm*
 
 *第 2 章，准备 Kubernetes 和 Helm 环境*
 

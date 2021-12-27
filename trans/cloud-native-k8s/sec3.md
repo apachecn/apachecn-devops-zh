@@ -4,7 +4,7 @@
 
 这本书的这一部分包括以下几章:
 
-*   [*第九章*](09.html#_idTextAnchor212)*Kubernetes上的可观测性*
-*   [*第 10 章*](10.html#_idTextAnchor230)*排除Kubernetes*
+*   [*第九章*](09.html#_idTextAnchor212)*Kubernetes 上的可观测性*
+*   [*第 10 章*](10.html#_idTextAnchor230)*排除 Kubernetes*
 *   [*第十一章*](11.html#_idTextAnchor251)*Kubernetes*模板代码生成及 CI/CD
-*   [*第 12 章*](12.html#_idTextAnchor269)*Kubernetes安全与合规*
+*   [*第 12 章*](12.html#_idTextAnchor269)*Kubernetes 安全与合规*

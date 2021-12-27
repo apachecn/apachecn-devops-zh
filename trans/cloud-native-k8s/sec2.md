@@ -6,6 +6,6 @@
 
 *   [*第 4 章*](04.html#_idTextAnchor106)*扩展和部署您的应用*
 *   [*第五章*](05.html#_idTextAnchor127)*服务与入口——与外界沟通*
-*   [*第 6 章*](06.html#_idTextAnchor143)*Kubernetes应用配置*
-*   [*第七章*](07.html#_idTextAnchor166)*Kubernetes上的存储*
+*   [*第 6 章*](06.html#_idTextAnchor143)*Kubernetes 应用配置*
+*   [*第七章*](07.html#_idTextAnchor166)*Kubernetes 上的存储*
 *   [*第八章*](08.html#_idTextAnchor186)*Pod 放置控制*
