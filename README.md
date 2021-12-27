@@ -31,6 +31,16 @@
 +   [Docker 监控手册](docs/monitor-docker/SUMMARY.md)
 +   [Docker 安全手册](docs/sec-docker/SUMMARY.md)
 +   [Docker 故障排除手册](docs/troubleshoot-docker/SUMMARY.md)
++   [Kubernetes 云原生指南](docs/cloud-native-k8s/SUMMARY.md)
++   [OpenStack 容器手册](docs/container-openstack/SUMMARY.md)
++   [Kubernetes DevOps 手册](docs/devops-k8s/SUMMARY.md)
++   [Docker 网络秘籍](docs/docker-net-cb/SUMMARY.md)
++   [Kubernetes Azure 实用指南](docs/handson-k8s-azure/SUMMARY.md)
++   [Kubectl：Kubernetes 的命令行手册](docs/kubectl-cli-k8s-nutshell/SUMMARY.md)
++   [Docker 网络学习手册](docs/learn-docker-net/SUMMARY.md)
++   [Helm 学习手册](docs/learn-helm/SUMMARY.md)
++   [Kubernetes 安全学习手册](docs/learn-k8s-sec/SUMMARY.md)
++   [Docker 编排指南](docs/orches-docker/SUMMARY.md)
 
 ## 贡献指南
 
