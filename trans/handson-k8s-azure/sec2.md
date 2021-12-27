@@ -1,4 +1,4 @@
-# 第 2 节:在 AKS 上部署
+# 第二部分：AKS 上的部署
 
 至此，您已经学习了容器和 Kubernetes 的基础知识，并在 Azure 上建立了一个 Kubernetes 集群。在本节中，您将学习如何在 Kubernetes 集群上部署应用。
 
