@@ -6,7 +6,7 @@
 
 *   [*第 6 章*](06.html#_idTextAnchor170)*保护集群组件*
 *   [*第 7 章*](07.html#_idTextAnchor186)*认证、授权和准入控制*
-*   [*第八章*](08.html#_idTextAnchor249)*保护库本内斯豆荚*
+*   [*第八章*](08.html#_idTextAnchor249)*保护Kubernetes豆荚*
 *   [*第九章*](09.html#_idTextAnchor277)*图像扫描在 DevOps 管道*
-*   [*第 10 章*](10.html#_idTextAnchor305)*库本内斯集群的实时监控和资源管理*
+*   [*第 10 章*](10.html#_idTextAnchor305)*Kubernetes集群的实时监控和资源管理*
 *   [*第十一章*](11.html#_idTextAnchor324)*纵深防御*
