@@ -1,0 +1,1013 @@
+<!--[if IE]><![endif]--><!DOCTYPE html><!--[if IE 8]><html class="no-js ie8 oldie" lang="en" prefix="og: http://ogp.me/ns/# og:book: http://ogp.me/ns/book# og:video: http://ogp.me/ns/video#"
+
+    
+        itemscope itemtype="http://schema.org/Book http://schema.org/ItemPage" data-login-url="/accounts/login/"
+data-offline-url="/"
+data-url="/library/view/docker-deep-dive/9781800565135/chap05.xhtml"
+data-csrf-cookie="csrfsafari"
+data-highlight-privacy=""
+
+
+  data-user-id="2396337"
+  data-user-uuid="8778dade-aeed-4320-893c-d28b645a62b7"
+  data-username="brentwest"
+  data-account-type="Paid"
+  
+  data-activated-trial-date="12/29/2017"
+
+
+  data-archive="9781800565135"
+  data-publishers="Packt Publishing"
+
+
+
+  data-htmlfile-name="chap05.xhtml"
+  data-epub-title="Docker Deep Dive" data-debug=0 data-testing=0><![endif]--><!--[if gt IE 8]><!--><html class="no-js" lang="en" prefix="og: http://ogp.me/ns/# og:book: http://ogp.me/ns/book# og:video: http://ogp.me/ns/video#"
+
+    
+        itemscope itemtype="http://schema.org/Book http://schema.org/ItemPage" data-login-url="/accounts/login/"
+data-offline-url="/"
+data-url="/library/view/docker-deep-dive/9781800565135/chap05.xhtml"
+data-csrf-cookie="csrfsafari"
+data-highlight-privacy=""
+
+
+  data-user-id="2396337"
+  data-user-uuid="8778dade-aeed-4320-893c-d28b645a62b7"
+  data-username="brentwest"
+  data-account-type="Paid"
+  
+  data-activated-trial-date="12/29/2017"
+
+
+  data-archive="9781800565135"
+  data-publishers="Packt Publishing"
+
+
+
+  data-htmlfile-name="chap05.xhtml"
+  data-epub-title="Docker Deep Dive" data-debug=0 data-testing=0><!--<![endif]--><head><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta name="author" content="O'Reilly Media" /><meta name="format-detection" content="telephone=no"><meta http-equiv="cleartype" content="on"/><meta name="HandheldFriendly" content="True"/><meta name="MobileOptimized" content="320"/><meta name="apple-itunes-app" content="app-id=881697395, app-argument=safaridetail://9781800565135"/><link rel="shortcut icon" href="https://www.oreilly.com/favicon.ico" /><meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0"/><meta property="twitter:account_id" content="4503599627559754" /><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"><link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'><title>4: The big picture - Docker Deep Dive</title><link rel="stylesheet" href="/static/CACHE/css/output.731fc84c4f9a.css" type="text/css" /><link rel="stylesheet" type="text/css" href="/static/css/annotator.e3b0c44298fc.css"/><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"><style type="text/css" title="ibis-book">
+    #sbo-rt-content div{widows:2;orphans:2;-webkit-hyphens:none !important;adobe-hyphenate:none;-moz-hyphens:none;hyphens:none}#sbo-rt-content #cover-image{width:100%}@media (max-width:480px){#sbo-rt-content table{width:90% !important}}#sbo-rt-content div#text-cover h2{page-break-before:avoid}#sbo-rt-content h2#toc{margin-top:1em;font-variant:normal;font-family:sans-serif}#sbo-rt-content nav#guide{display:none}#sbo-rt-content ol.toc,#sbo-rt-content ol.toc ol{padding:0;margin:0}#sbo-rt-content .toc.no-parts>li{margin-bottom:.5em;margin-top:.5em;font-size:122%}#sbo-rt-content .toc.no-parts>li>ol>li{font-size:83%}#sbo-rt-content .toc.no-parts>li>ol>li>ol{font-size:80%}#sbo-rt-content .toc.has-parts>li{margin-bottom:1em;margin-top:1em;font-size:120%}#sbo-rt-content .toc.has-parts>li>ol>li{font-size:83%}#sbo-rt-content .toc.has-parts>li>ol>li>ol{font-size:80%}#sbo-rt-content .toc li{list-style:none;padding-left:0;margin-left:1em}#sbo-rt-content .section-number{font-weight:bold}#sbo-rt-content section.dedication-centered{text-align:center}#sbo-rt-content section.dedication{font-style:italic;margin-top:10em}#sbo-rt-content h1#toc{text-align:left}#sbo-rt-content h1,#sbo-rt-content h2,#sbo-rt-content h3,#sbo-rt-content h4,#sbo-rt-content h5,#sbo-rt-content h6{font-family:sans-serif}#sbo-rt-content h1,#sbo-rt-content h2,#sbo-rt-content h3,#sbo-rt-content h4,#sbo-rt-content h5,#sbo-rt-content h6{page-break-after:avoid}#sbo-rt-content body.kramdown h1,#sbo-rt-content body.markua h1.part{font-size:2em;line-height:.8em;font-variant:small-caps;margin-top:20%;text-align:center;padding:0;font-weight:normal}#sbo-rt-content h1#toc,#sbo-rt-content body.kramdown h2,#sbo-rt-content body.markua h1.chapter{font-size:1.5em;margin-top:10%;margin-bottom:1em}#sbo-rt-content body.kramdown h3,#sbo-rt-content body.markua h2.section{font-size:1.17em;margin-top:1em;margin-bottom:.25em}#sbo-rt-content body.kramdown h4,#sbo-rt-content body.markua h3.subsection{margin-top:1em;font-size:1.12em;margin-bottom:.25em}#sbo-rt-content body.kramdown h5,#sbo-rt-content body.markua h4.subsubsection{margin-top:1em;font-size:.83em;margin-bottom:.25em}#sbo-rt-content body.kramdown h6,#sbo-rt-content body.markua h5.subsubsubsection{font-size:.75em;margin:0}#sbo-rt-content hr.scene-break{width:80%;margin-left:10%;margin-right:10%;margin-top:1em;margin-bottom:1em}#sbo-rt-content .scene-break.space{margin-top:1em}#sbo-rt-content .scene-break.stars{margin-top:1em;margin-bottom:1em;width:100%;text-align:center}#sbo-rt-content table{margin:10px auto 20px auto;border-collapse:collapse;page-break-inside:avoid}#sbo-rt-content table.markua-grid-table,#sbo-rt-content table.markua-grid-table td,#sbo-rt-content table.markua-grid-table th{border:thin solid}#sbo-rt-content thead{border-bottom:thin solid}#sbo-rt-content table.markua-grid-table thead{border-bottom:medium solid}#sbo-rt-content tdiv{padding-bottom:40px}#sbo-rt-content tfoot{border-top:medium solid}#sbo-rt-content tr{page-break-inside:avoid}#sbo-rt-content td,#sbo-rt-content th{padding-right:10px}#sbo-rt-content th{text-align:left}#sbo-rt-content ol.quiz-questions>li{margin-top:1em}#sbo-rt-content ol.quiz-questions ol.quiz-choices{padding-left:1em}#sbo-rt-content ol.quiz-questions li p{text-indent:0}#sbo-rt-content p+figure.inline{page-break-before:avoid}#sbo-rt-content p{text-indent:0;margin-top:.5em}#sbo-rt-content span.underline{text-decoration:underline}#sbo-rt-content span.strikethrough{text-decoration:line-through}#sbo-rt-content blockquote{margin:1.5em 0 1.5em 2em}#sbo-rt-content code.lineno,#sbo-rt-content span.lineno{color:gray;font-size:80%}#sbo-rt-content figure.code{margin-top:1em;margin-bottom:1.5em;margin-left:0;font-size:90%}#sbo-rt-content figure.code figcaption+.highlight{border-top:thin solid #c2c2c2;border-bottom:thin solid #c2c2c2}#sbo-rt-content code{-webkit-hyphens:none}#sbo-rt-content figure.code div.highlight{-webkit-hyphens:none}#sbo-rt-content figure.code figcaption,#sbo-rt-content table caption{page-break-after:avoid;margin-bottom:0}#sbo-rt-content table caption{text-align:center}#sbo-rt-content figure.code figcaption{margin-top:-10px;padding-top:-10px;text-indent:0}#sbo-rt-content table.with-caption{margin-top:0;padding-top:0;page-break-before:avoid}#sbo-rt-content .centered p{text-align:center;text-indent:0}#sbo-rt-content div.page-break{page-break-after:always}#sbo-rt-content aside{font-size:.9em;border-style:solid;background-color:rgb(255,255,255);border-color:rgb(200,200,200);border-width:thin;margin:1em;padding:1em 1.5em}#sbo-rt-content aside h1,#sbo-rt-content aside h2,#sbo-rt-content aside h3,#sbo-rt-content aside h4{margin-bottom:.5em;margin-top:0;text-align:left}#sbo-rt-content aside.blurb{background-color:white;margin:1em 1em 1em 0;border-style:none;width:calc(100% - 60px);display:inline-block;padding-left:60px;background-repeat:no-repeat;background-position:0% 1em;background-size:40px 40px}#sbo-rt-content aside.blurb{background-image:url(images/leanpub_warning.png)}#sbo-rt-content div.footnotes h1,#sbo-rt-content div.footnotes h2{text-align:left}#sbo-rt-content div.footnotes h1{font-size:1.5em}#sbo-rt-content div.footnotes h2{font-size:1.17em}#sbo-rt-content div.footnotes .endnote-number{padding-right:.5em;font-weight:bold;font-size:1.2em}#sbo-rt-content pre{margin-top:.5em;margin-bottom:.5em;font-family:monospace}#sbo-rt-content div.poem pre{font-family:serif}#sbo-rt-content img.inline-equation{height:1em;vertical-align:baseline}#sbo-rt-content img.block-equation{margin-top:.5em;margin-right:auto;margin-bottom:.5em;margin-left:auto;text-align:center;display:block}#sbo-rt-content ul,#sbo-rt-content ol{margin-top:1em}#sbo-rt-content ul ul,#sbo-rt-content ul ol,#sbo-rt-content ol ul,#sbo-rt-content ol ol{margin-top:.1em}#sbo-rt-content ol.arabic{list-style-type:decimal}#sbo-rt-content ol.lower-roman{list-style-type:lower-roman}#sbo-rt-content ol.lower-alpha{list-style-type:lower-alpha}#sbo-rt-content ol.upper-alpha{list-style-type:upper-alpha}#sbo-rt-content p.caption,#sbo-rt-content table caption,#sbo-rt-content figure.image figcaption{font-size:.7em;font-weight:bold}#sbo-rt-content figure.image{width:90%;max-width:90%;margin-inline-start:0;margin-inline-end:0;text-align:center}#sbo-rt-content figure.image img{display:inline-block}#sbo-rt-content figure figcaption{text-align:center;margin:0 !important;padding:0 !important;text-indent:0 !important;page-break-before:avoid}#sbo-rt-content .figure-wrapper.center{text-align:center}#sbo-rt-content .figure-wrapper.floatleft figure{float:left;clear:left;margin-right:1em;margin-left:0}#sbo-rt-content .figure-wrapper.floatright figure{float:right;clear:right;margin-left:1em;margin-right:0}#sbo-rt-content .figure-wrapper.floatleft figure,#sbo-rt-content .figure-wrapper.floatright figure{width:50%}#sbo-rt-content .figure-wrapper.floatleft figure img,#sbo-rt-content .figure-wrapper.floatright figure img{width:100% !important;vertical-align:text-top;margin:.5em !important}#sbo-rt-content .figure-wrapper.floatleft figure figcaption,#sbo-rt-content .figure-wrapper.floatright figure figcaption{width:100%}#sbo-rt-content .figure-wrapper.alignright{text-align:right}#sbo-rt-content .figure-wrapper.alignleft{text-align:left}#sbo-rt-content .figure-wrapper.alignleft figure{margin-left:0}#sbo-rt-content .figure-wrapper.alignright figure{margin-right:0}#sbo-rt-content .figure-wrapper.alignright figure,#sbo-rt-content .figure-wrapper.alignleft figure{text-align:center}#sbo-rt-content figure.alignright figcaption,#sbo-rt-content figure.alignleft figcaption{text-align:center}#sbo-rt-content .udl{text-decoration:line-through}#sbo-rt-content .uil{font-weight:900}#sbo-rt-content figure.image,#sbo-rt-content image,#sbo-rt-content figure.audio,#sbo-rt-content audio{display:inline-block}#sbo-rt-content .hll{background-color:#ffc}#sbo-rt-content .c{color:#408080;font-style:italic}#sbo-rt-content .err{color:#F00}#sbo-rt-content .k{color:#008000;font-weight:600}#sbo-rt-content .o{color:#666}#sbo-rt-content .cm{color:#408080;font-style:italic}#sbo-rt-content .cp{color:#BC7A00}#sbo-rt-content .c1{color:#408080;font-style:italic}#sbo-rt-content .cs{color:#408080;font-style:italic}#sbo-rt-content .gd{color:#A00000}#sbo-rt-content .ge{font-style:italic}#sbo-rt-content .gr{color:#F00}#sbo-rt-content .gh{color:#000080;font-weight:600}#sbo-rt-content .gi{color:#00A000}#sbo-rt-content .go{color:#888}#sbo-rt-content .gp{color:#000080;font-weight:600}#sbo-rt-content .gs{font-weight:600}#sbo-rt-content .gu{color:#800080;font-weight:600}#sbo-rt-content .gt{color:#04D}#sbo-rt-content .kc{color:#008000;font-weight:600}#sbo-rt-content .kd{color:#008000;font-weight:600}#sbo-rt-content .kn{color:#008000;font-weight:600}#sbo-rt-content .kp{color:#008000}#sbo-rt-content .kr{color:#008000;font-weight:600}#sbo-rt-content .kt{color:#B00040}#sbo-rt-content .m{color:#666}#sbo-rt-content .s{color:#BA2121}#sbo-rt-content .na{color:#7D9029}#sbo-rt-content .nb{color:#008000}#sbo-rt-content .nc{color:#00F;font-weight:600}#sbo-rt-content .no{color:#800}#sbo-rt-content .nd{color:#A2F}#sbo-rt-content .ni{color:#999;font-weight:600}#sbo-rt-content .ne{color:#D2413A;font-weight:600}#sbo-rt-content .nf{color:#00F}#sbo-rt-content .nl{color:#A0A000}#sbo-rt-content .nn{color:#00F;font-weight:600}#sbo-rt-content .nt{color:#008000;font-weight:600}#sbo-rt-content .nv{color:#19177C}#sbo-rt-content .ow{color:#A2F;font-weight:600}#sbo-rt-content .w{color:#bbb}#sbo-rt-content .mf{color:#666}#sbo-rt-content .mh{color:#666}#sbo-rt-content .mi{color:#666}#sbo-rt-content .mo{color:#666}#sbo-rt-content .sb{color:#BA2121}#sbo-rt-content .sc{color:#BA2121}#sbo-rt-content .sd{color:#BA2121;font-style:italic}#sbo-rt-content .s2{color:#BA2121}#sbo-rt-content .se{color:#B62;font-weight:600}#sbo-rt-content .sh{color:#BA2121}#sbo-rt-content .si{color:#B68;font-weight:600}#sbo-rt-content .sx{color:#008000}#sbo-rt-content .sr{color:#B68}#sbo-rt-content .s1{color:#BA2121}#sbo-rt-content .ss{color:#19177C}#sbo-rt-content .bp{color:#008000}#sbo-rt-content .vc{color:#19177C}#sbo-rt-content .vg{color:#19177C}#sbo-rt-content .vi{color:#19177C}#sbo-rt-content .il{color:#666}
+    </style><script> // <![CDATA[
+    var g = {
+      position_cache: {
+        
+          "chapter": "/api/v1/book/9781800565135/chapter/chap05.xhtml",
+          "book_id": "9781800565135",
+          "chapter_uri": "chap05.xhtml",
+          "position": 0,
+          "user_uuid": "8778dade-aeed-4320-893c-d28b645a62b7",
+          "next_chapter_uri": "/library/view/docker-deep-dive/9781800565135/chap06.xhtml"
+        
+      },
+      title: "Docker Deep Dive",
+      author_list: "Nigel Poulton",
+      format: "book",
+      source: "application/epub+zip",
+      is_system_book: true,
+      is_public: false,
+      loaded_from_server: true,
+      allow_scripts: false,
+      has_mathml: false
+    };
+    // ]]></script><script src="/static/js/src/modernizr.8e35451ddb64.js"></script><script>
+    
+      
+
+      
+        
+          window.PUBLIC_ANNOTATIONS = true;
+        
+      
+
+      window.MOBILE_PUBLIC_ANNOTATIONS = false;
+
+    
+
+    
+      window.PRIVACY_CONTROL_OVERRIDE = false;
+    
+
+      window.PRIVACY_CONTROL_SWITCH = true;
+
+      window.PUBLISHER_PAGES = true;
+
+      window.SBO = {
+        "constants": {
+          "SITB_ENDPOINT": "/api/v2/sitb/",
+          "SEARCH_SELECT_ENDPOINT": "https://learning.oreilly.com/api/v2/search/select/",
+          "ENABLE_ONLINE_TRAINING": true
+        }
+      };
+  </script><link rel="canonical" href="https://learning.oreilly.com/library/view/docker-deep-dive/9781800565135/chap05.xhtml"/><meta name="description" content=" 4: The big picture The aim of this chapter is to paint a quick big-picture of what Docker is all about before we dive in deeper in later chapters. We’ll ... "><meta property="og:title" content="4: The big picture" /><meta itemprop="isPartOf" content="/library/view/docker-deep-dive/9781800565135/" /><meta itemprop="name" content="4: The big picture" /><meta property="og:url" itemprop="url" content="https://learning.oreilly.com/library/view/docker-deep-dive/9781800565135/chap05.xhtml" /><meta property="og:site_name" content="Safari" /><meta property="og:image" itemprop="thumbnailUrl" content="https://learning.oreilly.com/library/cover/9781800565135/" /><meta property="og:description" itemprop="description" content=" 4: The big picture The aim of this chapter is to paint a quick big-picture of what Docker is all about before we dive in deeper in later chapters. We’ll ... "><meta itemprop="inLanguage" content="en" /><meta itemprop="publisher" content="Packt Publishing" /><meta property="og:type" content="book" /><meta property="og:book:isbn" itemprop="isbn" content="9781800565135" /><meta property="og:book:author" itemprop="author" content="Nigel Poulton" /><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@OReillyMedia"><style type="text/css" id="font-styles" data-template="#sbo-rt-content, #sbo-rt-content p, #sbo-rt-content div { font-size: <%= font_size %> !important; }"></style><style type="text/css" id="font-family" data-template="#sbo-rt-content, #sbo-rt-content p, #sbo-rt-content div { font-family: <%= font_family %> !important; }"></style><style type="text/css" id="column-width" data-template="#sbo-rt-content { max-width: <%= column_width %>% !important; margin: 0 auto !important; }"></style><noscript><meta http-equiv="refresh" content="0; url=/library/no-js/" /></noscript><script>
+    var dataLayer = window.dataLayer || [];
+
+    
+      window.medalliaVsgUserIdentifier = '8778dade-aeed-4320-893c-d28b645a62b7';
+      dataLayer.push({userIdentifier: '8778dade-aeed-4320-893c-d28b645a62b7'});
+      dataLayer.push({loggedIn: 'yes'});
+
+      
+        window.medalliaVsgAccountIdentifier = 'dc635f87-41b9-4c9e-80f5-2296e3b5b566';
+        
+
+        window.medalliaVsgIsIndividual = true;
+        
+          
+          dataLayer.push({learningAccountType: 'individual'});
+          
+        
+
+        
+          dataLayer.push({learningPaidAccount: 'yes'});
+        
+      
+    
+
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5P4V6Z');
+    (function () {
+      var VERSION = 'V1.1';
+      var AUTHOR = 'Awwad';
+      if (!window.GtmHelper)
+        window.GtmHelper = function () {
+          var instance = this;
+          var loc = document.location;
+          this.version = VERSION;
+          this.author = AUTHOR;
+          this.readCookie = function (name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+              var c = ca[i];
+              while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+              if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+          };
+          this.createCookie = function (name, value, days, cookieDomain) {
+            var domain = "";
+            var expires = "";
+
+            if (days) {
+              var date = new Date();
+              date.setTime(date.getTime() + Math.ceil(days * 24 * 60 * 60 * 1000));
+              var expires = " expires=" + date.toGMTString() + ";";
+            }
+
+            if (typeof (cookieDomain) != 'undefined')
+              domain = " domain=" + cookieDomain + "; ";
+
+            document.cookie = name + "=" + value + ";" + expires + domain + "path=/";
+          };
+
+          this.isDuplicated = function (currentTransactionId) {
+            // the previous transaction id:
+            var previousTransIdValue = this.readCookie("previousTransId");
+
+            if (currentTransactionId === previousTransIdValue) {
+              return true; // Duplication
+            } else {
+              return false;
+            }
+          };
+        }
+    })()
+  </script><script defer src="/static/js/build/vendor.3eecedff6f59.js"></script><script defer src="/static/js/build/reader.04601a48277a.js"></script></head>
+
+
+<body class="reading sidenav nav-collapsed  scalefonts">
+
+    
+  <noscript> 
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-5P4V6Z"
+            height="0" width="0"
+            style="display:none;visibility:hidden">
+    </iframe>
+  </noscript>
+
+
+
+    
+      <div class="hide working" role="status">
+        <div class="working-image"></div>
+      </div>
+      <div class="sbo-site-nav">
+        
+
+  
+
+
+<a href="#container" class="skip">Skip to content</a><header class="topbar t-topbar"><nav role="navigation" class="js-site-nav"><ul class="topnav"><li><a href="/home/" class="l0 nav-icn"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M11.738 14H9.254v-3.676a.617.617 0 0 0-.621-.613H7.39a.617.617 0 0 0-.62.613V14H4.284a.617.617 0 0 1-.622-.613V10.22c0-.327.132-.64.367-.87l3.547-3.493a.627.627 0 0 1 .875 0l3.54 3.499c.234.229.366.54.367.864v3.167a.617.617 0 0 1-.62.613zM7.57 2.181a.625.625 0 0 1 .882 0l5.77 5.692-.93.92-5.28-5.209-5.28 5.208-.932-.919 5.77-5.692z" /></svg><span>Home</span></a></li><li class="search"><a href="#" class="t-search-nav trigger nav-icn l0" data-dropdown-selector=".searchbox"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="20" height="20" version="1.1" fill="#4A3C31"><desc>search icon</desc><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M31.3 0C20.9 0 12.5 8.4 12.5 18.8 12.5 22.5 13.6 25.9 15.4 28.8L1.2 42.9C-0.4 44.5-0.4 47.2 1.2 48.8 2 49.6 3.1 50 4.2 50 5.2 50 6.3 49.6 7.1 48.8L21.2 34.6C24.1 36.5 27.5 37.5 31.3 37.5 41.6 37.5 50 29.1 50 18.8 50 8.4 41.6 0 31.3 0ZM31.3 31.3C24.4 31.3 18.8 25.6 18.8 18.8 18.8 11.9 24.4 6.3 31.3 6.3 38.1 6.3 43.8 11.9 43.8 18.8 43.8 25.6 38.1 31.3 31.3 31.3Z"/></g></svg><span>Search</span></a></li><li class="usermenu dropdown"><a href="#" class="trigger l0 nav-icn nav-dropdown"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20" version="1.1" fill="#4A3C31"><desc>navigation arrow</desc><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M0.1 12.5L9.7 3.1C9.8 3 9.9 3 10 3 10.1 3 10.2 3 10.3 3.1L19.9 12.5C20 12.5 20 12.6 20 12.8 20 12.9 20 13 19.9 13L17 15.9C16.9 16 16.8 16 16.7 16 16.5 16 16.4 16 16.4 15.9L10 9.7 3.6 15.9C3.6 16 3.5 16 3.3 16 3.2 16 3.1 16 3 15.9L0.1 13C0 12.9 0 12.8 0 12.7 0 12.7 0 12.6 0.1 12.5Z"/></g></svg><span>Expand Nav</span></a><div class="drop-content"><ul><li class="flyout-parent"><a
+                href="#"
+                class="l1 nav-icn "
+                
+              ><?xml version="1.0" encoding="UTF-8"?><svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M8,8 C6.34321755,8 5.00013,6.65691245 5.00013,5.00013 C5.00013,3.34334755 6.34321755,2.00026001 8,2.00026001 C9.65678245,2.00026001 10.99987,3.34334755 10.99987,5.00013 C10.99987,6.65691245 9.65678245,8 8,8 Z M2.33024571,11.3523547 L2.33774538,11.3523547 C3.7622187,9.70968996 5.82947484,8.76608166 8.00374984,8.76608166 C10.1780248,8.76608166 12.245281,9.70968996 13.6697543,11.3523547 C13.8892083,11.6177474 14.0062813,11.9530021 13.99974,12.2973138 L13.99974,13.99974 L2.00026001,13.99974 L2.00026001,12.2973138 C1.99371867,11.9530021 2.11079172,11.6177474 2.33024571,11.3523547 Z" id="path-1"></path></svg><span>Your O&#39;Reilly</span></a><ul class="flyout"><li><a
+                    href="/profile/"
+                    class="l2 nav-icn"
+                    
+                  ><span>Profile</span></a></li><li><a
+                    href="/history/"
+                    class="l2 nav-icn"
+                    
+                  ><span>History</span></a></li><li><a
+                    href="/playlists/"
+                    class="l2 nav-icn"
+                    
+                  ><span>Playlists</span></a></li><li><a
+                    href="/u/8778dade-aeed-4320-893c-d28b645a62b7/"
+                    class="l2 nav-icn"
+                    
+                  ><span>Highlights</span></a></li></ul></li><li class="flyout-parent"><a
+                href="#"
+                class="l1 nav-icn "
+                
+              ><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M11.564 2.263l2.172 2.174c.17.168.264.397.264.636V11a.6.6 0 0 1-.6.6h-.6V6.2h-6V2.6a.6.6 0 0 1 .6-.6h3.527c.239 0 .468.095.637.263zM2.6 14a.6.6 0 0 1-.6-.6V6.8a.6.6 0 0 1 .6-.6h1.903a1.2 1.2 0 0 1 .849.352L6.2 7.4H11a.6.6 0 0 1 .6.6v5.4a.6.6 0 0 1-.6.6H2.6zM11 5h1.8L11 3.2V5z" /></svg><span>Featured</span></a><ul class="flyout"><li><a
+                    href="/featured/navigating-21st-century/"
+                    class="l2 nav-icn"
+                    
+                  ><span>Navigating Change</span></a></li><li><a
+                    href="/recommendations/"
+                    class="l2 nav-icn"
+                    
+                  ><span>Recommended</span></a></li></ul></li><li class="flyout-parent"><a
+                href="#"
+                class="l1 nav-icn "
+                
+              ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="20" height="20" version="1.1" fill="#4A3C31"><desc>queue icon</desc><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M25 29.2C25.4 29.2 25.8 29.1 26.1 28.9L48.7 16.8C49.5 16.4 50 15.5 50 14.6 50 13.7 49.5 12.8 48.7 12.4L26.1 0.3C25.4-0.1 24.6-0.1 23.9 0.3L1.3 12.4C0.5 12.8 0 13.7 0 14.6 0 15.5 0.5 16.4 1.3 16.8L23.9 28.9C24.2 29.1 24.6 29.2 25 29.2ZM7.3 14.6L25 5.2 42.7 14.6 25 24 7.3 14.6ZM48.7 22.4L47.7 21.9 25 34.2 2.3 21.9 1.3 22.4C0.5 22.9 0 23.7 0 24.7 0 25.6 0.5 26.5 1.3 26.9L23.9 39.3C24.2 39.5 24.6 39.6 25 39.6 25.4 39.6 25.8 39.5 26.1 39.3L48.7 26.9C49.5 26.5 50 25.6 50 24.7 50 23.7 49.5 22.9 48.7 22.4ZM48.7 32.8L47.7 32.3 25 44.6 2.3 32.3 1.3 32.8C0.5 33.3 0 34.1 0 35.1 0 36 0.5 36.9 1.3 37.3L23.9 49.7C24.2 49.9 24.6 50 25 50 25.4 50 25.8 49.9 26.1 49.7L48.7 37.3C49.5 36.9 50 36 50 35.1 50 34.1 49.5 33.3 48.7 32.8Z"/></g></svg><span>Explore</span></a><ul class="flyout"><li><a
+                    href="/topics/"
+                    class="l2 nav-icn"
+                    
+                  ><span>All Topics</span></a></li><li><a
+                    href="/search/?query=&amp;extended_publisher_data=true&amp;highlight=true&amp;include_assessments=false&amp;include_case_studies=true&amp;include_courses=true&amp;include_orioles=true&amp;include_playlists=true&amp;include_collections=true&amp;include_notebooks=true&amp;is_academic_institution_account=false&amp;source=user&amp;formats=book&amp;sort=publication_date&amp;facet_json=true&amp;page=0"
+                    class="l2 nav-icn"
+                    
+                  ><span>Early Releases</span></a></li><li><a
+                    href="/playlists/discover/"
+                    class="l2 nav-icn"
+                    
+                  ><span>Shared Playlists</span></a></li><li><a
+                    href="/search/?query=&amp;extended_publisher_data=true&amp;highlight=true&amp;include_assessments=false&amp;include_case_studies=true&amp;include_courses=true&amp;include_orioles=true&amp;include_playlists=true&amp;include_collections=true&amp;include_notebooks=true&amp;is_academic_institution_account=false&amp;source=user&amp;formats=book&amp;formats=case%20study&amp;formats=learning%20path&amp;formats=live%20online%20training&amp;formats=notebook&amp;formats=oriole&amp;formats=video&amp;sort=popularity&amp;facet_json=true&amp;page=0&amp;collection_type=expert"
+                    class="l2 nav-icn"
+                    
+                  ><span>Most Popular Titles</span></a></li><li><a
+                    href="/resource-centers/"
+                    class="l2 nav-icn"
+                    
+                  ><span>Resource Centers</span></a></li></ul></li><li class="flyout-parent"><a
+                href="#"
+                class="l1 nav-icn "
+                
+              ><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M12.8 3.2A1.2 1.2 0 0 1 14 4.4v8.4a1.2 1.2 0 0 1-1.2 1.2H3.2A1.2 1.2 0 0 1 2 12.8V4.4a1.2 1.2 0 0 1 1.2-1.2h1.2V2h1.2v1.2h4.8V2h1.2v1.2h1.2zm-9.6 9.6h9.6V6.2H3.2v6.6zM8 9.5a1.35 1.35 0 1 1 0-2.7 1.35 1.35 0 0 1 0 2.7zm2.7 2.148v.552H5.3v-.552c0-.321.124-.634.355-.858a3.358 3.358 0 0 1 4.69 0c.23.224.355.537.355.858z" /></svg><span>Attend</span></a><ul class="flyout"><li><a
+                    href="/live-training/"
+                    class="l2 nav-icn"
+                    
+                  ><span>Live Trainings</span></a></li><li><a
+                    href="/featured/architectural-katas"
+                    class="l2 nav-icn"
+                    
+                  ><span>Architectural Katas</span></a></li><li><a
+                    href="/featured/strata/"
+                    class="l2 nav-icn"
+                    
+                  ><span>Strata</span></a></li><li><a
+                    href="/featured/oscon/"
+                    class="l2 nav-icn"
+                    
+                  ><span>Open Source</span></a></li><li><a
+                    href="/featured/infrastructure-ops/"
+                    class="l2 nav-icn"
+                    
+                  ><span>Infra &amp; Ops</span></a></li><li><a
+                    href="/featured/software-architecture/"
+                    class="l2 nav-icn"
+                    
+                  ><span>Software Arch</span></a></li></ul></li><li class="flyout-parent"><a
+                href="#"
+                class="l1 nav-icn "
+                
+              ><svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M11.6467109,4.35328907 L14.7964612,7.51003884 C15.0678463,7.78304342 15.0678463,8.22395603 14.7964612,8.49696061 L11.6467109,11.6467109 L10.6597892,10.6597892 L13.3055794,8 L10.6597892,5.34021084 L11.6467109,4.35328907 Z M4.35328907,11.6467109 L1.20353875,8.48996116 C0.932153749,8.21695658 0.932153749,7.77604397 1.20353875,7.50303939 L4.35328907,4.35328907 L5.34021084,5.34021084 L2.69442057,8 L5.34021084,10.6597892 L4.35328907,11.6467109 Z M5.84417089,11.4997226 L8.67194674,4.50027742 L10.1838269,4.50027742 L7.35605105,11.4997226 L5.84417089,11.4997226 Z" id="Mask"></path></svg><span>Interact</span></a><ul class="flyout"><li><a
+                    href="/scenarios/?classification=content-scenario"
+                    class="l2 nav-icn"
+                    
+                  ><span>Scenarios</span></a></li><li><a
+                    href="/scenarios/?classification=sandbox-scenario"
+                    class="l2 nav-icn"
+                    
+                  ><span>Sandboxes</span></a></li><li><a
+                    href="/interactive/?classification=jupyter-notebook"
+                    class="l2 nav-icn"
+                    
+                  ><span>Jupyter Notebooks</span></a></li></ul></li><li ><a
+                href="/answers/"
+                class="l1 nav-icn "
+                
+              ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M2.31032699,3.75609006 C4.65421571,1.41371359 8.45302454,1.41472092 10.7955702,3.75860838 C13.1381158,6.10249583 13.1369405,9.90130261 10.7930518,12.243847 C8.44916311,14.5863913 4.65018639,14.5852161 2.30780867,12.2413286 C-0.0346204845,9.89749489 -0.0334929936,6.09853298 2.31032699,3.75609006 Z M8.8198605,4.98016308 C7.34193969,3.86924672 5.23410194,3.98609692 3.88914868,5.33104946 C3.12814393,6.09032122 2.72818176,7.13880077 2.79015179,8.21201133 C2.79115912,8.23064692 2.79233434,8.24928252 2.79350956,8.26791811 L2.79350956,8.26791811 C2.83179539,8.8307976 2.9944077,9.37404287 3.26947292,9.86201677 L3.26947292,9.86201677 L2.77621706,11.7027432 C2.7699968,11.7259241 2.77662063,11.7506624 2.79359185,11.7676337 C2.8105631,11.7846049 2.83530144,11.7912287 2.85848233,11.7850085 L2.85848233,11.7850085 L4.69400524,11.2922565 C5.26306363,11.6167344 5.90703177,11.786885 6.56209849,11.7858479 C8.64827865,11.7858479 10.3395879,10.094542 10.3395879,8.00836292 C10.3405204,6.84135608 9.80105674,5.73967784 8.87862141,5.02482134 L8.87862141,5.02482134 L8.82825492,4.98654283 Z M13.7933062,2 C14.7073496,2.00009863 15.4482759,2.74110484 15.4482759,3.65514822 C15.4482759,4.32460943 15.0449926,4.92814782 14.4264842,5.18432286 C13.8079757,5.44049789 13.096053,5.29885769 12.6226979,4.82545158 C12.1493429,4.35204547 12.0077795,3.64010743 12.2640213,3.02162665 C12.5202631,2.40314587 13.123845,1.99992776 13.7933062,2 Z"/></svg><span>Answers</span></a></li><li ><a
+                href="/certifications/"
+                class="l1 nav-icn "
+                
+              ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M12.912 9.18L14 8.014l-1.088-1.18a.304.304 0 01-.075-.268L13.195 5l-1.535-.463a.313.313 0 01-.194-.194l-.462-1.537-1.565.358c-.09.03-.194 0-.269-.074L8.007 2 6.845 3.09a.303.303 0 01-.269.074l-1.565-.358-.462 1.537a.313.313 0 01-.194.194L2.82 5l.358 1.567a.26.26 0 01-.075.269L2 8.015l1.088 1.164c.075.075.09.18.075.269l-.358 1.567 1.535.463c.09.03.164.104.194.194l.462 1.537 1.565-.358c.015 0 .045-.015.075-.015.075 0 .15.03.209.074L8.007 14l1.163-1.09a.303.303 0 01.269-.074l1.565.358.462-1.537a.313.313 0 01.194-.194L13.195 11l-.358-1.567a.338.338 0 01.075-.254zm-6.046 1.37L4.41 8.26l1.16-1.244 1.767 1.649L10.4 5.6l1.202 1.202-4.242 4.243-.495-.495z"/></svg><span>Certifications</span></a></li><li ><a
+                href="/preferences/"
+                class="l1 nav-icn "
+                
+              ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 53" width="20" height="20" version="1.1" fill="#4A3C31"><desc>settings icon</desc><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M44.6 29.6C44.7 28.6 44.8 27.5 44.8 26.5 44.8 25.5 44.7 24.4 44.6 23.4L49.6 19C50 18.8 50.1 18.3 49.9 17.9 48.9 14.7 47.1 11.7 44.9 9.1 44.6 8.8 44.2 8.7 43.8 8.8L37.4 11.1C35.8 9.8 34 8.7 32.1 8L30.9 1.4C30.8 0.9 30.4 0.6 30 0.5 26.7-0.2 23.3-0.2 20 0.5 19.6 0.6 19.2 0.9 19.1 1.4L17.9 8C16 8.7 14.1 9.8 12.6 11.1L6.2 8.8C5.8 8.7 5.4 8.8 5.1 9.1 2.9 11.7 1.1 14.7 0.1 17.9 -0.1 18.3 0 18.8 0.4 19L5.4 23.4C5.3 24.4 5.2 25.5 5.2 26.5 5.2 27.5 5.3 28.6 5.4 29.6L0.4 34C0 34.2-0.1 34.7 0.1 35.1 1.1 38.3 2.9 41.4 5.1 43.9 5.4 44.2 5.8 44.4 6.2 44.2L12.6 42C14.1 43.2 16 44.3 17.9 45L19.1 51.7C19.2 52.1 19.6 52.5 20 52.5 21.6 52.8 23.3 53 25 53 26.7 53 28.4 52.8 30 52.5 30.4 52.5 30.8 52.1 30.9 51.7L32.1 45C34 44.3 35.8 43.2 37.4 42L43.8 44.2C44.2 44.4 44.6 44.2 44.9 43.9 47.1 41.4 48.9 38.3 49.9 35.1 50.1 34.7 50 34.2 49.6 34L44.6 29.6ZM25 36.4C19.6 36.4 15.2 32 15.2 26.5 15.2 21 19.6 16.6 25 16.6 30.4 16.6 34.8 21 34.8 26.5 34.8 32 30.4 36.4 25 36.4Z"/></g></svg><span>Settings</span></a></li><li ><a
+                href="/public/support/"
+                class="l1 nav-icn "
+                
+              ><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M7.363 6.656a2.692 2.692 0 0 1-2.681-2.703c0-1.493 1.2-2.703 2.681-2.703a2.692 2.692 0 0 1 2.682 2.703c0 1.493-1.2 2.703-2.682 2.703zm4.023 2.027c-1.852 0-3.352 1.513-3.352 3.379H2v-1.534c-.006-.31.099-.612.295-.852a6.666 6.666 0 0 1 9.09-.993zm-.543.676h1.12v.304c.003.284.16.543.408.676a.766.766 0 0 0 .77 0l.303-.176.556.966-.302.176a.772.772 0 0 0-.362.676v.08a.772.772 0 0 0 .362.677l.302.21-.556.965-.302-.175a.766.766 0 0 0-.771 0 .778.778 0 0 0-.409.675v.352h-1.106v-.372a.778.778 0 0 0-.409-.676.766.766 0 0 0-.77 0l-.303.176-.556-.912.302-.176a.772.772 0 0 0 .362-.676v-.04-.04a.772.772 0 0 0-.362-.676l-.302-.176.556-.966.289.155a.766.766 0 0 0 .77 0 .778.778 0 0 0 .41-.676V9.36zm1.562 2.703c0-.271-.108-.531-.3-.722a1.001 1.001 0 0 0-.72-.292 1.01 1.01 0 0 0-.992 1.023 1.01 1.01 0 0 0 1.01 1.004 1.01 1.01 0 0 0 1.002-1.013z" /></svg><span>Support</span></a></li><li ><a
+                href="https://get.oreilly.com/email-signup.html"
+                class="l1 nav-icn "
+                target=&quot;_blank&quot;
+              ><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M11.564 2.263l2.172 2.174c.17.168.264.397.264.636V11a.6.6 0 0 1-.6.6h-.6V6.2h-6V2.6a.6.6 0 0 1 .6-.6h3.527c.239 0 .468.095.637.263zM2.6 14a.6.6 0 0 1-.6-.6V6.8a.6.6 0 0 1 .6-.6h1.903a1.2 1.2 0 0 1 .849.352L6.2 7.4H11a.6.6 0 0 1 .6.6v5.4a.6.6 0 0 1-.6.6H2.6zM11 5h1.8L11 3.2V5z" /></svg><span>Newsletters</span></a></li><li ><a
+                href="/accounts/logout/"
+                class="l1 nav-icn "
+                
+              ><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M2.613 12.63A.607.607 0 0 1 2 12.03V3.602C2 3.269 2.274 3 2.613 3h5.515v1.204H3.226v7.223h4.902v1.203H2.613zM5.677 9.02V6.611h4.903V4.926a.301.301 0 0 1 .19-.274.31.31 0 0 1 .33.063l2.722 2.673a.594.594 0 0 1 0 .849L11.1 10.909a.31.31 0 0 1-.331.063.301.301 0 0 1-.19-.274V9.02H5.677z" /></svg><span>Sign Out</span></a></li></ul></div></li></ul></nav></header>
+
+
+
+      </div>
+      <div id="container" class="application">
+        
+          <div class="nav-container clearfix">
+            
+
+
+            
+            
+          </div>
+
+          
+
+  <div class="js-toc">
+    
+      <div class="sbo-reading-menu sbo-menu-top"><section class="sbo-toc-container toc-menu"><a href="#" class="sbo-toc-thumb"><span class="sbo-title ss-list"><h1><div class="visuallyhidden">Table of Contents for </div>
+      
+      Docker Deep Dive
+      
+    </h1></span></a><div class="toc-contents"></div></section></div>
+
+    
+
+    <div class="interface-controls interface-controls-top">
+      <ul class="interface-control-btns js-bitlist js-reader">
+        <li class="js-search-in-archive search-in-archive t-search-in-archive"><a href="#" title="Search in archive" class="js-search-controls search-controls" onclick="window.Appcues.track('SearchBook_HeronBook')"><span class="icon">Search in book...</span></a><form class="search-archive-bar js-search-form"><input type="search" name="query" placeholder="Search inside this book..." autocomplete="off"></form><div class="search-archive-results"><div class="js-sitb-results-region"></div></div></li><li class="queue-control"><div class="js-content-uri" data-content-uri="/api/v1/book/9781800565135/chapter/chap05.xhtml"><div class="js-collections-dropdown collections-dropdown menu-bit-cards" onclick="window.Appcues.track('AddPlaylist_HeronBook')"></div></div></li><li class="js-font-control-panel font-control-activator"><a href="#" data-push-state="false" id="font-controls" title="Change font size" aria-label="Change font size" onclick="window.Appcues.track('ChangeFont_HeronBook')"><span class="icon">Toggle Font Controls</span></a></li><li class="dropdown sharing-controls"><a href="#" class="trigger" data-push-state="false" title="Share" aria-label="Share" onclick="window.Appcues.track('Share_HeronBook')"><i class="fa fa-share"></i></a><ul class="social-sharing dropdown-menu"><li><a
+        class="twitter share-button t-twitter"
+        target="_blank"
+        aria-label="Share this section on Twitter"
+        title="Share this section on Twitter"
+      
+        href="https://twitter.com/share?url=https://learning.oreilly.com/library/view/docker-deep-dive/9781800565135/chap05.xhtml&text=Docker%20Deep%20Dive&via=OReillyMedia"
+      ><span>Twitter</span></a></li><li><a
+        class="facebook share-button t-facebook"
+        target="_blank"
+        aria-label="Share this section on Facebook"
+        title="Share this section on Facebook"
+        href="https://www.facebook.com/sharer/sharer.php?u=https://learning.oreilly.com/library/view/docker-deep-dive/9781800565135/chap05.xhtml"
+      ><span>Facebook</span></a></li><li><a
+        class="googleplus share-button t-googleplus"
+        target="_blank"
+        aria-label="Share this secton on Google Plus"
+        title="Share this secton on Google Plus"
+        href="https://plus.google.com/share?url=https://learning.oreilly.com/library/view/docker-deep-dive/9781800565135/chap05.xhtml"
+      ><span>Google Plus</span></a></li><li><a
+        class="email share-button t-email"
+        aria-label="Share this section via email"
+        title="Share this section via email"
+      
+        href="mailto:?subject=Safari: 4%3A%20The%20big%20picture&body=https://learning.oreilly.com/library/view/docker-deep-dive/9781800565135/chap05.xhtml%0D%0Afrom Docker%20Deep%20Dive%0D%0A"
+      ><span>Email</span></a></li></ul></li><!-- endif request.user.is_authenticated -->
+      </ul>
+    </div>
+
+      
+          
+      
+
+    <section role="document">
+        
+        
+
+
+
+
+  <script defer src="/static/js/build/djangoMessagesPage.70cc9b5f53ab.js"></script>
+
+
+        <script src="//fast.appcues.com/48743.js"></script>
+<script>
+  var userId = "8778dade-aeed-4320-893c-d28b645a62b7";
+
+  var userObject = {
+    firstName: "Brent",
+    segment: "Paid",
+    admin: "False",
+    profileCreatedOn: "2017-12-29",
+    academic: ""
+  };
+  window.Appcues.identify(userId, userObject);
+  window.Appcues.page();
+
+  setTimeout(function () {
+    window.Appcues.track('ViewingBook_HeronBook')
+  }, 20000);
+</script>
+
+
+	  <div class="t-sbo-prev sbo-prev sbo-nav-top">
+  
+    
+      
+        <a href="/library/view/docker-deep-dive/9781800565135/chap04.xhtml" class="prev nav-link">
+      
+          <span aria-hidden="true" class="pagination-label t-prev-label">Prev</span>
+          <span class="visuallyhidden">Previous Chapter</span>
+          <div class="pagination-title t-prev-title">3: Installing Docker</div>
+        </a>
+    
+  
+  </div>
+
+  <div class="t-sbo-next sbo-next sbo-nav-top">
+  
+    
+      
+        <a href="/library/view/docker-deep-dive/9781800565135/chap06.xhtml" class="next nav-link">
+      
+          <span aria-hidden="true" class="pagination-label t-next-label">Next</span>
+          <span class="visuallyhidden">Next Chapter</span>
+          <div class="pagination-title t-next-title">Part 2: The technical stuff</div>
+        </a>
+    
+  
+  </div>
+
+
+
+<div id="sbo-rt-content" class="kramdown"><div>
+<h2 id="leanpub-auto-the-big-picture">4: The big picture</h2>
+
+<p>The aim of this chapter is to paint a quick big-picture of what Docker is all about before we dive in deeper in later chapters.</p>
+
+<p>We’ll break this chapter into two:</p>
+
+<ul>
+  <li>The Ops perspective</li>
+  <li>The Dev perspective</li>
+</ul>
+
+<p>In the Ops Perspective section, we’ll download an image, start a new container, log in to the new container, run a command inside of it, and then destroy it.</p>
+
+<p>In the Dev Perspective section, we’ll focus more on the app. We’ll clone some app-code from GitHub, inspect a Dockerfile, containerize the app, run it as a container.</p>
+
+<p>These two sections will give you a good idea of what Docker is all about and how the major components fit together.  <strong>It’s recommended that you read both sections to get the <em>dev</em> and the <em>ops</em> perspectives.</strong> DevOps anyone?</p>
+
+<p>Don’t worry if some of the stuff we do here is totally new to you. We’re not trying to make you an expert in this chapter. This is about giving you a <em>feel of things</em> — setting you up so that when we get into the details in later chapters, you have an idea of how the pieces fit together.</p>
+
+<p>If you want to follow along, all you need is a single Docker host with an internet connection. I recommend Docker Desktop for your Mac or Windows PC. However, the examples will work anywhere that you have Docker installed. We’ll be showing examples using Linux containers and Windows containers.</p>
+
+<p>If you can’t install software and don’t have access to a public cloud, another great way to get Docker is Play With Docker (PWD). This is a web-based Docker playground that you can use for free. Just point your web browser to https://labs.play-with-docker.com/ and you’re ready to go (you’ll need a Docker Hub or GitHub account to be able to login).</p>
+
+<p>As we progress through the chapter, we may use the terms “Docker host” and “Docker node” interchangeably. Both refer to the system that you are running Docker on.</p>
+
+<h3 id="leanpub-auto-the-ops-perspective">The Ops Perspective</h3>
+
+<p>When you install Docker, you get two major components:</p>
+
+<ul>
+  <li>the Docker client</li>
+  <li>the Docker daemon (sometimes called the “Docker engine”)</li>
+</ul>
+
+<p>The daemon implements the runtime, API and everything else required to run Docker.</p>
+
+<p>In a default Linux installation, the client talks to the daemon via a local IPC/Unix socket at <code>/var/run/docker.sock</code>. On Windows this happens via a named pipe at <code>npipe:////./pipe/docker_engine</code>. Once installed, you can use the <code>docker version</code> command to test that the client and daemon (server) are running and talking to each other.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>&gt; docker version
+Client: Docker Engine - Community
+ Version:       19.03.8
+ API version:   1.40
+ Go version:    go1.12.17
+ Git commit:    afacb8b
+ Built: Wed Mar 11 01:23:10 2020
+ OS/Arch:       linux/amd64
+ Experimental:  false
+
+Server:
+ Engine:
+  Version:          19.03.8
+  API version:      1.40 (minimum version 1.12)
+  Go version:       go1.12.17
+  Git commit:       afacb8b
+  Built:            Wed Mar 11 01:29:16 2020
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          v1.2.13
+  ...
+</pre></div>
+
+</figure>
+
+<p>If you get a response back from the <code>Client</code> <strong>and</strong> <code>Server</code>, you’re good to go. </p>
+
+<p>If you are using Linux and get an error response from the Server component, make sure that Docker is up and running. Also, try the command again with <code>sudo</code> in front of it: <code>sudo docker version</code>. If it works with <code>sudo</code> you will need to add your user account to the local <code>docker</code> group, or prefix the remainder of the commands in the book with <code>sudo</code>.</p>
+
+<h4 id="leanpub-auto-images">Images</h4>
+
+<p>It’s useful to think of a Docker image as an object that contains an OS filesystem, an application, and all application dependencies. If you work in operations, it’s like a virtual machine template. A virtual machine template is essentially a stopped virtual machine. In the Docker world, an image is effectively a stopped container. If you’re a developer, you can think of an image as a <em>class</em>.</p>
+
+<p>Run the <code>docker image ls</code> command on your Docker host.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker image ls
+REPOSITORY    TAG        IMAGE ID       CREATED       SIZE
+</pre></div>
+
+</figure>
+
+<p>If you are working from a freshly installed Docker host, or Play With Docker, you will have no images and it will look like the previous output.</p>
+
+<p>Getting images onto your Docker host is called “pulling”. If you are following along with Linux, pull the <code>ubuntu:latest</code> image. If you are following along on Windows, pull the <code>mcr.microsoft.com/powershell:lts-nanoserver-1903</code> image.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker image pull ubuntu:latest
+latest: Pulling from library/ubuntu
+50aff78429b1: Pull complete
+f6d82e297bce: Pull complete
+275abb2c8a6f: Pull complete
+9f15a39356d6: Pull complete
+fc0342a94c89: Pull complete
+Digest: sha256:fbaf303...c0ea5d1212
+Status: Downloaded newer image for ubuntu:latest
+</pre></div>
+
+</figure>
+
+<p>Windows images can be large and take a long time to pull. </p>
+
+<p>Run the <code>docker image ls</code> command again to see the image you just pulled.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker images
+REPOSITORY      TAG      IMAGE ID        CREATED         SIZE
+ubuntu          latest   1d622ef86b13    16 hours ago    73.9MB
+</pre></div>
+
+</figure>
+
+<p>We’ll get into the details of where the image is stored and what’s inside of it in later chapters. For now, it’s enough to know that an image contains enough of an operating system (OS), as well as all the code and dependencies to run whatever application it’s designed for. The <code>ubuntu</code> image that we’ve pulled has a stripped-down version of the Ubuntu Linux filesystem, including a few of the common Ubuntu utilities. The <code>mcr.microsoft.com/powershell:lts-nanoserver-1903</code> image contains a Windows Server Core OS plus PowerShell.</p>
+
+<p>If you pull an application container such as <code>nginx</code> or <code>mcr.microsoft.com/windows/servercore/iis</code>, you will get an image that contains some OS, as well as the code to run either <code>NGINX</code> or <code>IIS</code>.</p>
+
+<p>It’s also worth noting that each image gets its own unique ID. When referencing images, you can refer to them using either <code>IDs</code> or names. If you’re working with image ID’s, it’s usually enough to type the first few characters of the ID — as long as it’s unique, Docker will know which image you mean.</p>
+
+<h4 id="leanpub-auto-containers">Containers</h4>
+
+<p>Now that we have an image pulled locally, we can use the <code>docker container run</code> command to launch a container from it.</p>
+
+<p>For Linux:</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker container run -it ubuntu:latest /bin/bash
+root@6dc20d508db0:/#
+</pre></div>
+
+</figure>
+
+<p>For Windows:</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>&gt; docker container run -it mcr.microsoft.com/powershell:lts-nanoserver-1903 pwsh.exe
+
+PowerShell 7.0.0
+Copyright (C) Microsoft Corporation. All rights reserved.
+PS C:\&gt;
+</pre></div>
+
+</figure>
+
+<p>Look closely at the output from the previous commands. You should notice that the shell prompt has changed in each instance. This is because the <code>-it</code> flags switch your shell into the terminal of the container — you are literally inside of the new container!</p>
+
+<p>Let’s examine that <code>docker container run</code> command. </p>
+
+<p><code>docker container run</code> tells the Docker daemon to start a new container. The <code>-it</code> flags tell Docker to make the container interactive and to attach the current shell to the container’s terminal (we’ll get more specific about this in the chapter on containers). Next, the command tells Docker that we want the container to be based on the <code>ubuntu:latest</code> image (or the <code>mcr.microsoft.com/powershell:lts-nanoserver-1903</code> image if you’re following along with Windows).  Finally, we tell Docker which process we want to run inside of the container. For the Linux example we’re running a Bash shell, for the Windows container we’re running PowerShell.</p>
+
+<p>Run a <code>ps</code> command from inside of the container to list all running processes.</p>
+
+<p>
+  <strong>Linux example:</strong>
+</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>root@6dc20d508db0:/# ps -elf
+F S UID    PID  PPID   NI ADDR SZ WCHAN  STIME TTY      TIME CMD
+4 S root     1     0    0 -  4560 -      13:38 pts/0    00:00:00 /bin/bash
+0 R root     9     1    0 -  8606 -      13:38 pts/0    00:00:00 ps -elf
+</pre></div>
+
+</figure>
+
+<p>
+  <strong>Windows example:</strong>
+</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>PS C:\&gt; ps
+
+NPM(K)    PM(M)      WS(M)     CPU(s)      Id  SI ProcessName
+ ------    -----      -----     ------      --  -- -----------
+      5     0.90       3.78       0.00    1068   1 CExecSvc
+      6     0.97       4.12       0.03    1184   1 conhost
+      6     0.87       2.16       0.00     972   1 csrss
+      0     0.06       0.01       0.00       0   0 Idle
+     18     4.38      12.32       0.00     272   1 lsass
+     54    34.82      65.09       1.27    1212   1 pwsh
+      9     1.61       4.99       0.00    1020   1 services
+      4     0.49       1.18       0.00     948   0 smss
+     14     1.98       6.61       0.00     628   1 svchost
+     12     2.95      10.02       0.00     752   1 svchost
+      8     1.83       6.02       0.00     788   1 svchost
+      7     1.42       4.70       0.00    1040   1 svchost
+     16     6.12      11.41       0.00    1120   1 svchost
+     24     3.73      10.38       0.00    1168   1 svchost
+     15     9.60      18.96       0.00    1376   1 svchost
+      0     0.16       0.14       0.00       4   0 System
+      8     1.16       4.12       0.00    1004   1 wininit
+</pre></div>
+
+</figure>
+
+<p>The Linux container only has two processes:</p>
+
+<ul>
+  <li>PID 1.  This is the <code>/bin/bash</code> process that we told the container to run with the <code>docker container run</code> command.</li>
+  <li>PID 9.  This is the <code>ps -elf</code> command/process that we ran to list the running processes.</li>
+</ul>
+
+<p>The presence of the <code>ps -elf</code> process in the Linux output can be a bit misleading as it is a short-lived process that dies as soon as the <code>ps</code> command completes. This means the only long-running process inside of the container is the <code>/bin/bash</code> process.</p>
+
+<p>The Windows container has a lot more going on. This is an artefact of the way the Windows Operating System works. However, even though the Windows container has a lot more processes than the Linux container, it is still a lot less than a regular Windows <strong>Server</strong>.</p>
+
+<p>Press <code>Ctrl-PQ</code> to exit the container without terminating it. This will land your shell back at the terminal of your Docker host. You can verify this by looking at your shell prompt.</p>
+
+<p>Now that you are back at the shell prompt of your Docker host, run the <code>ps</code> command again.</p>
+
+<p>Notice how many more processes are running on your Docker host compared to the container you just ran. Windows containers run far fewer processes than Windows hosts, and Linux containers run far less than Linux hosts.</p>
+
+<p>In a previous step, you pressed <code>Ctrl-PQ</code> to exit from the container. Doing this from inside of a container will exit you from the container without killing it. You can see all running containers on your system using the <code>docker container ls</code> command.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker container ls
+CONTAINER ID   IMAGE          COMMAND       CREATED  STATUS    NAMES
+6dc20d508db0   ubuntu:latest  "/bin/bash"   7 mins   Up 7 min  vigilant_borg
+</pre></div>
+
+</figure>
+
+<p>The output above shows a single running container. This is the container that you created earlier. The presence of the container in this output proves that it’s still running. You can also see that it was created 7 minutes ago and has been running for 7 minutes.</p>
+
+<h4 id="leanpub-auto-attaching-to-running-containers">Attaching to running containers</h4>
+
+<p>You can attach your shell to the terminal of a running container with the <code>docker container exec</code> command. As the container from the previous steps is still running, let’s make a new connection to it.</p>
+
+<p>
+  <strong>Linux example:</strong>
+</p>
+
+<p>This example references a container called “vigilant_borg”. The name of your container will be different, so remember to substitute “vigilant_borg” with the name or ID of the container running on your Docker host.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker container exec -it vigilant_borg bash
+root@6dc20d508db0:/#
+</pre></div>
+
+</figure>
+
+<p>
+  <strong>Windows example:</strong>
+</p>
+
+<p>This example references a container called “pensive_hamilton”. The name of your container will be different, so remember to substitute “pensive_hamilton” with the name or ID of the container running on your Docker host.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>&gt; docker container exec -it pensive_hamilton pwsh.exe
+
+PowerShell 7.0.0
+Copyright (C) Microsoft Corporation. All rights reserved.
+PS C:\&gt;
+</pre></div>
+
+</figure>
+
+<p>Notice that your shell prompt has changed again. You are logged into the container again.</p>
+
+<p>The format of the <code>docker container exec</code> command is: <code>docker container exec &lt;options&gt; &lt;container-name or container-id&gt; &lt;command/app&gt;</code>. In our examples, we used the <code>-it</code> options to attach our shell to the container’s shell. We referenced the container by name, and told it to run the bash shell (PowerShell in the Windows example). We could easily have referenced the container by its hex ID.</p>
+
+<p>Exit the container again by pressing <code>Ctrl-PQ</code>.</p>
+
+<p>Your shell prompt should be back to your Docker host.</p>
+
+<p>Run the <code>docker container ls</code> command again to verify that your container is still running.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker container ls
+CONTAINER ID   IMAGE          COMMAND       CREATED  STATUS    NAMES
+6dc20d508db0   ubuntu:latest  "/bin/bash"   9 mins   Up 9 min  vigilant_borg
+</pre></div>
+
+</figure>
+
+<p>Stop the container and kill it using the <code>docker container stop</code> and <code>docker container rm</code> commands. Remember to substitute the names/IDs of your own containers.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker container stop vigilant_borg
+vigilant_borg
+
+$ docker container rm vigilant_borg
+vigilant_borg
+</pre></div>
+
+</figure>
+
+<p>Verify that the container was successfully deleted by running the <code>docker container ls</code> command with the <code>-a</code> flag. Adding <code>-a</code> tells Docker to list all containers, even those in the stopped state.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker container ls -a
+CONTAINER ID    IMAGE    COMMAND    CREATED    STATUS    PORTS    NAMES
+</pre></div>
+
+</figure>
+
+<p>You’ve just pulled a Docker image, started a container from it, attached to it, executed a command inside it, stopped it, and deleted it.</p>
+
+<h3 id="leanpub-auto-the-dev-perspective">The Dev Perspective</h3>
+
+<p>Containers are all about the apps.</p>
+
+<p>In this section, we’ll clone an app from a Git repo, inspect its Dockerfile, containerize it, and run it as a container.</p>
+
+<p>The Linux app can be cloned from:
+https://github.com/nigelpoulton/psweb.git</p>
+
+<p>The Windows app can be cloned from:
+https://github.com/nigelpoulton/win-web.git</p>
+
+<p>The rest of this section will focus on the Linux NGINX example. However, both examples are containerizing simple web apps, so the process is the same. Where there are differences in the Windows example we will highlight them to help you follow along.</p>
+
+<p>Run all of the following commands from a terminal on your Docker host.</p>
+
+<p>Clone the repo locally. This will pull the application code to your local Docker host ready for you to containerize it.</p>
+
+<p>Be sure to substitute the following repo with the Windows repo if you are following along with the Windows example.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ git clone https://github.com/nigelpoulton/psweb.git
+Cloning into 'psweb'...
+remote: Counting objects: 15, done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 15 (delta 2), reused 15 (delta 2), pack-reused 0
+Unpacking objects: 100% (15/15), done.
+Checking connectivity... done.
+</pre></div>
+
+</figure>
+
+<p>Change directory into the cloned repo’s directory and list its contents.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ cd psweb
+$ ls -l
+total 40
+-rw-r--r--@ 1 ubuntu ubuntu  338 24 Apr 19:29 Dockerfile
+-rw-r--r--@ 1 ubuntu ubuntu  396 24 Apr 19:32 README.md
+-rw-r--r--@ 1 ubuntu ubuntu  341 24 Apr 19:29 app.js
+-rw-r--r--  1 ubuntu ubuntu  216 24 Apr 19:29 circle.yml
+-rw-r--r--@ 1 ubuntu ubuntu  377 24 Apr 19:36 package.json
+drwxr-xr-x  4 ubuntu ubuntu  128 24 Apr 19:29 test
+drwxr-xr-x  3 ubuntu ubuntu   96 24 Apr 19:29 views
+</pre></div>
+
+</figure>
+
+<p>The Linux example is a simple nodejs web app. The Windows example is an IIS server running some static HTML.</p>
+
+<p>Both Git repos contain a file called <code>Dockerfile</code>. This is a plain-text document that tells Docker how to build an app and dependencies into a Docker image.</p>
+
+<p>List the contents of the Dockerfile.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ cat Dockerfile
+
+FROM alpine
+LABEL maintainer="nigelpoulton@hotmail.com"
+RUN apk add --update nodejs nodejs-npm
+COPY . /src
+WORKDIR /src
+RUN  npm install
+EXPOSE 8080
+ENTRYPOINT ["node", "./app.js"]
+</pre></div>
+
+</figure>
+
+<p>The contents of the Dockerfile in the Windows example are different. However, this isn’t important at this stage. For now, it’s enough to understand that each line represents an instruction that Docker uses to build an image.</p>
+
+<p>At this point we have pulled some application code from a remote Git repo. We also have a Dockerfile containing instructions on how to build the app into a Docker image.</p>
+
+<p>Use the <code>docker image build</code> command to create a new image using the instructions in the Dockerfile. This example creates a new Docker image called <code>test:latest</code>.</p>
+
+<p>The command is the same for the Linux and Windows examples, and be sure to run it from within the directory containing the app code and Dockerfile.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker image build -t test:latest .
+
+Sending build context to Docker daemon  74.75kB
+Step 1/8 : FROM alpine
+latest: Pulling from library/alpine
+88286f41530e: Pull complete
+Digest: sha256:f006ecbb824...0c103f4820a417d
+Status: Downloaded newer image for alpine:latest
+ ---&gt; 76da55c8019d
+&lt;Snip&gt;
+Successfully built f154cb3ddbd4
+Successfully tagged test:latest
+</pre></div>
+
+</figure>
+
+<blockquote>
+  <p><strong>Note:</strong> It may take a long time for the build to finish in the Windows example. This is because of the image being pulled is several gigabytes in size.</p>
+</blockquote>
+
+<p>Once the build is complete, check to make sure that the new <code>test:latest</code> image exists on your host.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker image ls
+REPO     TAG      IMAGE ID        CREATED         SIZE
+test     latest   f154cb3ddbd4    1 minute ago    81.5MB
+...
+</pre></div>
+
+</figure>
+
+<p>You have a newly-built Docker image with the app and dependencies inside.</p>
+
+<p>Run a container from the image and test the app.</p>
+
+<p>
+  <strong>Linux example:</strong>
+</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker container run -d \
+  --name web1 \
+  --publish 8080:8080 \
+  test:latest
+</pre></div>
+
+</figure>
+
+<p>Open a web browser and navigate to the DNS name or IP address of the Docker host that you are running the container from, and point it to port 8080. You will see the following web page.</p>
+
+<p>If you are following along with Docker for Windows or Docker for Mac, you will be able to use <code>localhost:8080</code> or <code>127.0.0.1:8080</code>. If you’re following along on Play With Docker, you will be able to click the <code>8080</code> hyperlink above the terminal screen.</p>
+
+
+<div class="figure-wrapper center">
+  <figure class="image" style="width: 395px">
+    <img src="/library/view/docker-deep-dive/9781800565135/images/figure4-1.png" alt="Figure 4.1" style="width: 100%" width="2231" height="780">
+    <figcaption>Figure 4.1</figcaption>
+  </figure>
+</div>
+
+
+<p>
+  <strong>Windows example:</strong>
+</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>&gt; docker container run -d \
+  --name web1 \
+  --publish 8080:80 \
+  test:latest
+</pre></div>
+
+</figure>
+
+<p>Open a web browser and navigate to the DNS name or IP address of the Docker host that you are running the container from, and point it to port 8080. You will see the following web page.</p>
+
+<p>The same rules apply if you’re following along with Docker Desktop or Play With Docker.</p>
+
+
+<div class="figure-wrapper center">
+  <figure class="image" style="width: 395px">
+    <img src="/library/view/docker-deep-dive/9781800565135/images/figure4-2.png" alt="Figure 4.2" style="width: 100%" width="2231" height="780">
+    <figcaption>Figure 4.2</figcaption>
+  </figure>
+</div>
+
+
+<p>Well done. You’ve taken some application code from a remote Git repo and built it into a Docker image. You then ran a container from it. We call this “containerizing an app”.</p>
+
+<h3 id="leanpub-auto-chapter-summary-3">Chapter Summary</h3>
+
+<p>In the Ops section of the chapter you downloaded a Docker image, launched a container from it, logged into the container, executed a command inside of it, and then stopped and deleted the container.</p>
+
+<p>In the Dev section, you containerized a simple application by pulling some source code from GitHub and building it into an image using instructions in a Dockerfile. You then ran the containerized app.</p>
+
+<p>This <em>big picture</em> view should help you with the up-coming chapters where we will dig deeper into images and containers.</p>
+
+
+
+</div>
+</div>
+
+
+
+  <div class="t-sbo-prev sbo-prev sbo-nav-bottom">
+  
+    
+      
+        <a href="/library/view/docker-deep-dive/9781800565135/chap04.xhtml" class="prev nav-link">
+      
+          <span aria-hidden="true" class="pagination-label t-prev-label">Prev</span>
+          <span class="visuallyhidden">Previous Chapter</span>
+          <div class="pagination-title t-prev-title">3: Installing Docker</div>
+        </a>
+    
+  
+  </div>
+
+  <div class="t-sbo-next sbo-next sbo-nav-bottom">
+  
+    
+      
+        <a href="/library/view/docker-deep-dive/9781800565135/chap06.xhtml" class="next nav-link">
+      
+          <span aria-hidden="true" class="pagination-label t-next-label">Next</span>
+          <span class="visuallyhidden">Next Chapter</span>
+          <div class="pagination-title t-next-title">Part 2: The technical stuff</div>
+        </a>
+    
+  
+  </div>
+
+
+        
+    </section>
+  </div>
+<section class="sbo-saved-archives"></section>
+
+
+
+          
+          
+  
+
+
+
+
+    
+    
+
+
+
+        
+      </div>
+      
+        
+
+<footer class="pagefoot t-pagefoot">
+  <a href="#" class="icon-up" onclick="window.Appcues.track('JumpTop_HeronBook')"><div class="visuallyhidden">Back to top</div></a>
+  <ul class='js-footer-nav'>
+  
+    
+    <li><a href="/public/support/">Support</a></li>
+    
+    <li><a href="/accounts/logout/">Sign Out</a></li>
+    
+  
+  
+  </ul>
+  <span class="copyright">&#169; 2020 <a href="/" target="_blank">O'Reilly Media, Inc</a>.</span>
+  
+    
+    <a href="https://www.oreilly.com/terms/">Terms of Service</a> 
+     / 
+    
+    <a href="/privacy">Privacy Policy</a> 
+    
+    
+  
+</footer>
+
+      
+    
+    <script src="/jsi18n/web/" charset="utf-8"></script>
+    <script src="/library/jsi18n/appcache/" charset="utf-8"></script>
+  </body>
+</html>

@@ -1,0 +1,1486 @@
+<!--[if IE]><![endif]--><!DOCTYPE html><!--[if IE 8]><html class="no-js ie8 oldie" lang="en" prefix="og: http://ogp.me/ns/# og:book: http://ogp.me/ns/book# og:video: http://ogp.me/ns/video#"
+
+    
+        itemscope itemtype="http://schema.org/Book http://schema.org/ItemPage" data-login-url="/accounts/login/"
+data-offline-url="/"
+data-url="/library/view/docker-deep-dive/9781800565135/chap08.xhtml"
+data-csrf-cookie="csrfsafari"
+data-highlight-privacy=""
+
+
+  data-user-id="2396337"
+  data-user-uuid="8778dade-aeed-4320-893c-d28b645a62b7"
+  data-username="brentwest"
+  data-account-type="Paid"
+  
+  data-activated-trial-date="12/29/2017"
+
+
+  data-archive="9781800565135"
+  data-publishers="Packt Publishing"
+
+
+
+  data-htmlfile-name="chap08.xhtml"
+  data-epub-title="Docker Deep Dive" data-debug=0 data-testing=0><![endif]--><!--[if gt IE 8]><!--><html class="no-js" lang="en" prefix="og: http://ogp.me/ns/# og:book: http://ogp.me/ns/book# og:video: http://ogp.me/ns/video#"
+
+    
+        itemscope itemtype="http://schema.org/Book http://schema.org/ItemPage" data-login-url="/accounts/login/"
+data-offline-url="/"
+data-url="/library/view/docker-deep-dive/9781800565135/chap08.xhtml"
+data-csrf-cookie="csrfsafari"
+data-highlight-privacy=""
+
+
+  data-user-id="2396337"
+  data-user-uuid="8778dade-aeed-4320-893c-d28b645a62b7"
+  data-username="brentwest"
+  data-account-type="Paid"
+  
+  data-activated-trial-date="12/29/2017"
+
+
+  data-archive="9781800565135"
+  data-publishers="Packt Publishing"
+
+
+
+  data-htmlfile-name="chap08.xhtml"
+  data-epub-title="Docker Deep Dive" data-debug=0 data-testing=0><!--<![endif]--><head><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta name="author" content="O'Reilly Media" /><meta name="format-detection" content="telephone=no"><meta http-equiv="cleartype" content="on"/><meta name="HandheldFriendly" content="True"/><meta name="MobileOptimized" content="320"/><meta name="apple-itunes-app" content="app-id=881697395, app-argument=safaridetail://9781800565135"/><link rel="shortcut icon" href="https://www.oreilly.com/favicon.ico" /><meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0"/><meta property="twitter:account_id" content="4503599627559754" /><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"><link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'><title>6: Images - Docker Deep Dive</title><link rel="stylesheet" href="/static/CACHE/css/output.731fc84c4f9a.css" type="text/css" /><link rel="stylesheet" type="text/css" href="/static/css/annotator.e3b0c44298fc.css"/><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"><style type="text/css" title="ibis-book">
+    #sbo-rt-content div{widows:2;orphans:2;-webkit-hyphens:none !important;adobe-hyphenate:none;-moz-hyphens:none;hyphens:none}#sbo-rt-content #cover-image{width:100%}@media (max-width:480px){#sbo-rt-content table{width:90% !important}}#sbo-rt-content div#text-cover h2{page-break-before:avoid}#sbo-rt-content h2#toc{margin-top:1em;font-variant:normal;font-family:sans-serif}#sbo-rt-content nav#guide{display:none}#sbo-rt-content ol.toc,#sbo-rt-content ol.toc ol{padding:0;margin:0}#sbo-rt-content .toc.no-parts>li{margin-bottom:.5em;margin-top:.5em;font-size:122%}#sbo-rt-content .toc.no-parts>li>ol>li{font-size:83%}#sbo-rt-content .toc.no-parts>li>ol>li>ol{font-size:80%}#sbo-rt-content .toc.has-parts>li{margin-bottom:1em;margin-top:1em;font-size:120%}#sbo-rt-content .toc.has-parts>li>ol>li{font-size:83%}#sbo-rt-content .toc.has-parts>li>ol>li>ol{font-size:80%}#sbo-rt-content .toc li{list-style:none;padding-left:0;margin-left:1em}#sbo-rt-content .section-number{font-weight:bold}#sbo-rt-content section.dedication-centered{text-align:center}#sbo-rt-content section.dedication{font-style:italic;margin-top:10em}#sbo-rt-content h1#toc{text-align:left}#sbo-rt-content h1,#sbo-rt-content h2,#sbo-rt-content h3,#sbo-rt-content h4,#sbo-rt-content h5,#sbo-rt-content h6{font-family:sans-serif}#sbo-rt-content h1,#sbo-rt-content h2,#sbo-rt-content h3,#sbo-rt-content h4,#sbo-rt-content h5,#sbo-rt-content h6{page-break-after:avoid}#sbo-rt-content body.kramdown h1,#sbo-rt-content body.markua h1.part{font-size:2em;line-height:.8em;font-variant:small-caps;margin-top:20%;text-align:center;padding:0;font-weight:normal}#sbo-rt-content h1#toc,#sbo-rt-content body.kramdown h2,#sbo-rt-content body.markua h1.chapter{font-size:1.5em;margin-top:10%;margin-bottom:1em}#sbo-rt-content body.kramdown h3,#sbo-rt-content body.markua h2.section{font-size:1.17em;margin-top:1em;margin-bottom:.25em}#sbo-rt-content body.kramdown h4,#sbo-rt-content body.markua h3.subsection{margin-top:1em;font-size:1.12em;margin-bottom:.25em}#sbo-rt-content body.kramdown h5,#sbo-rt-content body.markua h4.subsubsection{margin-top:1em;font-size:.83em;margin-bottom:.25em}#sbo-rt-content body.kramdown h6,#sbo-rt-content body.markua h5.subsubsubsection{font-size:.75em;margin:0}#sbo-rt-content hr.scene-break{width:80%;margin-left:10%;margin-right:10%;margin-top:1em;margin-bottom:1em}#sbo-rt-content .scene-break.space{margin-top:1em}#sbo-rt-content .scene-break.stars{margin-top:1em;margin-bottom:1em;width:100%;text-align:center}#sbo-rt-content table{margin:10px auto 20px auto;border-collapse:collapse;page-break-inside:avoid}#sbo-rt-content table.markua-grid-table,#sbo-rt-content table.markua-grid-table td,#sbo-rt-content table.markua-grid-table th{border:thin solid}#sbo-rt-content thead{border-bottom:thin solid}#sbo-rt-content table.markua-grid-table thead{border-bottom:medium solid}#sbo-rt-content tdiv{padding-bottom:40px}#sbo-rt-content tfoot{border-top:medium solid}#sbo-rt-content tr{page-break-inside:avoid}#sbo-rt-content td,#sbo-rt-content th{padding-right:10px}#sbo-rt-content th{text-align:left}#sbo-rt-content ol.quiz-questions>li{margin-top:1em}#sbo-rt-content ol.quiz-questions ol.quiz-choices{padding-left:1em}#sbo-rt-content ol.quiz-questions li p{text-indent:0}#sbo-rt-content p+figure.inline{page-break-before:avoid}#sbo-rt-content p{text-indent:0;margin-top:.5em}#sbo-rt-content span.underline{text-decoration:underline}#sbo-rt-content span.strikethrough{text-decoration:line-through}#sbo-rt-content blockquote{margin:1.5em 0 1.5em 2em}#sbo-rt-content code.lineno,#sbo-rt-content span.lineno{color:gray;font-size:80%}#sbo-rt-content figure.code{margin-top:1em;margin-bottom:1.5em;margin-left:0;font-size:90%}#sbo-rt-content figure.code figcaption+.highlight{border-top:thin solid #c2c2c2;border-bottom:thin solid #c2c2c2}#sbo-rt-content code{-webkit-hyphens:none}#sbo-rt-content figure.code div.highlight{-webkit-hyphens:none}#sbo-rt-content figure.code figcaption,#sbo-rt-content table caption{page-break-after:avoid;margin-bottom:0}#sbo-rt-content table caption{text-align:center}#sbo-rt-content figure.code figcaption{margin-top:-10px;padding-top:-10px;text-indent:0}#sbo-rt-content table.with-caption{margin-top:0;padding-top:0;page-break-before:avoid}#sbo-rt-content .centered p{text-align:center;text-indent:0}#sbo-rt-content div.page-break{page-break-after:always}#sbo-rt-content aside{font-size:.9em;border-style:solid;background-color:rgb(255,255,255);border-color:rgb(200,200,200);border-width:thin;margin:1em;padding:1em 1.5em}#sbo-rt-content aside h1,#sbo-rt-content aside h2,#sbo-rt-content aside h3,#sbo-rt-content aside h4{margin-bottom:.5em;margin-top:0;text-align:left}#sbo-rt-content aside.blurb{background-color:white;margin:1em 1em 1em 0;border-style:none;width:calc(100% - 60px);display:inline-block;padding-left:60px;background-repeat:no-repeat;background-position:0% 1em;background-size:40px 40px}#sbo-rt-content aside.blurb{background-image:url(images/leanpub_warning.png)}#sbo-rt-content div.footnotes h1,#sbo-rt-content div.footnotes h2{text-align:left}#sbo-rt-content div.footnotes h1{font-size:1.5em}#sbo-rt-content div.footnotes h2{font-size:1.17em}#sbo-rt-content div.footnotes .endnote-number{padding-right:.5em;font-weight:bold;font-size:1.2em}#sbo-rt-content pre{margin-top:.5em;margin-bottom:.5em;font-family:monospace}#sbo-rt-content div.poem pre{font-family:serif}#sbo-rt-content img.inline-equation{height:1em;vertical-align:baseline}#sbo-rt-content img.block-equation{margin-top:.5em;margin-right:auto;margin-bottom:.5em;margin-left:auto;text-align:center;display:block}#sbo-rt-content ul,#sbo-rt-content ol{margin-top:1em}#sbo-rt-content ul ul,#sbo-rt-content ul ol,#sbo-rt-content ol ul,#sbo-rt-content ol ol{margin-top:.1em}#sbo-rt-content ol.arabic{list-style-type:decimal}#sbo-rt-content ol.lower-roman{list-style-type:lower-roman}#sbo-rt-content ol.lower-alpha{list-style-type:lower-alpha}#sbo-rt-content ol.upper-alpha{list-style-type:upper-alpha}#sbo-rt-content p.caption,#sbo-rt-content table caption,#sbo-rt-content figure.image figcaption{font-size:.7em;font-weight:bold}#sbo-rt-content figure.image{width:90%;max-width:90%;margin-inline-start:0;margin-inline-end:0;text-align:center}#sbo-rt-content figure.image img{display:inline-block}#sbo-rt-content figure figcaption{text-align:center;margin:0 !important;padding:0 !important;text-indent:0 !important;page-break-before:avoid}#sbo-rt-content .figure-wrapper.center{text-align:center}#sbo-rt-content .figure-wrapper.floatleft figure{float:left;clear:left;margin-right:1em;margin-left:0}#sbo-rt-content .figure-wrapper.floatright figure{float:right;clear:right;margin-left:1em;margin-right:0}#sbo-rt-content .figure-wrapper.floatleft figure,#sbo-rt-content .figure-wrapper.floatright figure{width:50%}#sbo-rt-content .figure-wrapper.floatleft figure img,#sbo-rt-content .figure-wrapper.floatright figure img{width:100% !important;vertical-align:text-top;margin:.5em !important}#sbo-rt-content .figure-wrapper.floatleft figure figcaption,#sbo-rt-content .figure-wrapper.floatright figure figcaption{width:100%}#sbo-rt-content .figure-wrapper.alignright{text-align:right}#sbo-rt-content .figure-wrapper.alignleft{text-align:left}#sbo-rt-content .figure-wrapper.alignleft figure{margin-left:0}#sbo-rt-content .figure-wrapper.alignright figure{margin-right:0}#sbo-rt-content .figure-wrapper.alignright figure,#sbo-rt-content .figure-wrapper.alignleft figure{text-align:center}#sbo-rt-content figure.alignright figcaption,#sbo-rt-content figure.alignleft figcaption{text-align:center}#sbo-rt-content .udl{text-decoration:line-through}#sbo-rt-content .uil{font-weight:900}#sbo-rt-content figure.image,#sbo-rt-content image,#sbo-rt-content figure.audio,#sbo-rt-content audio{display:inline-block}#sbo-rt-content .hll{background-color:#ffc}#sbo-rt-content .c{color:#408080;font-style:italic}#sbo-rt-content .err{color:#F00}#sbo-rt-content .k{color:#008000;font-weight:600}#sbo-rt-content .o{color:#666}#sbo-rt-content .cm{color:#408080;font-style:italic}#sbo-rt-content .cp{color:#BC7A00}#sbo-rt-content .c1{color:#408080;font-style:italic}#sbo-rt-content .cs{color:#408080;font-style:italic}#sbo-rt-content .gd{color:#A00000}#sbo-rt-content .ge{font-style:italic}#sbo-rt-content .gr{color:#F00}#sbo-rt-content .gh{color:#000080;font-weight:600}#sbo-rt-content .gi{color:#00A000}#sbo-rt-content .go{color:#888}#sbo-rt-content .gp{color:#000080;font-weight:600}#sbo-rt-content .gs{font-weight:600}#sbo-rt-content .gu{color:#800080;font-weight:600}#sbo-rt-content .gt{color:#04D}#sbo-rt-content .kc{color:#008000;font-weight:600}#sbo-rt-content .kd{color:#008000;font-weight:600}#sbo-rt-content .kn{color:#008000;font-weight:600}#sbo-rt-content .kp{color:#008000}#sbo-rt-content .kr{color:#008000;font-weight:600}#sbo-rt-content .kt{color:#B00040}#sbo-rt-content .m{color:#666}#sbo-rt-content .s{color:#BA2121}#sbo-rt-content .na{color:#7D9029}#sbo-rt-content .nb{color:#008000}#sbo-rt-content .nc{color:#00F;font-weight:600}#sbo-rt-content .no{color:#800}#sbo-rt-content .nd{color:#A2F}#sbo-rt-content .ni{color:#999;font-weight:600}#sbo-rt-content .ne{color:#D2413A;font-weight:600}#sbo-rt-content .nf{color:#00F}#sbo-rt-content .nl{color:#A0A000}#sbo-rt-content .nn{color:#00F;font-weight:600}#sbo-rt-content .nt{color:#008000;font-weight:600}#sbo-rt-content .nv{color:#19177C}#sbo-rt-content .ow{color:#A2F;font-weight:600}#sbo-rt-content .w{color:#bbb}#sbo-rt-content .mf{color:#666}#sbo-rt-content .mh{color:#666}#sbo-rt-content .mi{color:#666}#sbo-rt-content .mo{color:#666}#sbo-rt-content .sb{color:#BA2121}#sbo-rt-content .sc{color:#BA2121}#sbo-rt-content .sd{color:#BA2121;font-style:italic}#sbo-rt-content .s2{color:#BA2121}#sbo-rt-content .se{color:#B62;font-weight:600}#sbo-rt-content .sh{color:#BA2121}#sbo-rt-content .si{color:#B68;font-weight:600}#sbo-rt-content .sx{color:#008000}#sbo-rt-content .sr{color:#B68}#sbo-rt-content .s1{color:#BA2121}#sbo-rt-content .ss{color:#19177C}#sbo-rt-content .bp{color:#008000}#sbo-rt-content .vc{color:#19177C}#sbo-rt-content .vg{color:#19177C}#sbo-rt-content .vi{color:#19177C}#sbo-rt-content .il{color:#666}
+    </style><script> // <![CDATA[
+    var g = {
+      position_cache: {
+        
+          "chapter": "/api/v1/book/9781800565135/chapter/chap08.xhtml",
+          "book_id": "9781800565135",
+          "chapter_uri": "chap08.xhtml",
+          "position": 0,
+          "user_uuid": "8778dade-aeed-4320-893c-d28b645a62b7",
+          "next_chapter_uri": "/library/view/docker-deep-dive/9781800565135/chap09.xhtml"
+        
+      },
+      title: "Docker Deep Dive",
+      author_list: "Nigel Poulton",
+      format: "book",
+      source: "application/epub+zip",
+      is_system_book: true,
+      is_public: false,
+      loaded_from_server: true,
+      allow_scripts: false,
+      has_mathml: false
+    };
+    // ]]></script><script src="/static/js/src/modernizr.8e35451ddb64.js"></script><script>
+    
+      
+
+      
+        
+          window.PUBLIC_ANNOTATIONS = true;
+        
+      
+
+      window.MOBILE_PUBLIC_ANNOTATIONS = false;
+
+    
+
+    
+      window.PRIVACY_CONTROL_OVERRIDE = false;
+    
+
+      window.PRIVACY_CONTROL_SWITCH = true;
+
+      window.PUBLISHER_PAGES = true;
+
+      window.SBO = {
+        "constants": {
+          "SITB_ENDPOINT": "/api/v2/sitb/",
+          "SEARCH_SELECT_ENDPOINT": "https://learning.oreilly.com/api/v2/search/select/",
+          "ENABLE_ONLINE_TRAINING": true
+        }
+      };
+  </script><link rel="canonical" href="https://learning.oreilly.com/library/view/docker-deep-dive/9781800565135/chap08.xhtml"/><meta name="description" content=" 6: Images In this chapter we’ll dive deep into Docker images. The aim of the game is to give you a solid understanding of what Docker images are, how to ... "><meta property="og:title" content="6: Images" /><meta itemprop="isPartOf" content="/library/view/docker-deep-dive/9781800565135/" /><meta itemprop="name" content="6: Images" /><meta property="og:url" itemprop="url" content="https://learning.oreilly.com/library/view/docker-deep-dive/9781800565135/chap08.xhtml" /><meta property="og:site_name" content="Safari" /><meta property="og:image" itemprop="thumbnailUrl" content="https://learning.oreilly.com/library/cover/9781800565135/" /><meta property="og:description" itemprop="description" content=" 6: Images In this chapter we’ll dive deep into Docker images. The aim of the game is to give you a solid understanding of what Docker images are, how to ... "><meta itemprop="inLanguage" content="en" /><meta itemprop="publisher" content="Packt Publishing" /><meta property="og:type" content="book" /><meta property="og:book:isbn" itemprop="isbn" content="9781800565135" /><meta property="og:book:author" itemprop="author" content="Nigel Poulton" /><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@OReillyMedia"><style type="text/css" id="font-styles" data-template="#sbo-rt-content, #sbo-rt-content p, #sbo-rt-content div { font-size: <%= font_size %> !important; }"></style><style type="text/css" id="font-family" data-template="#sbo-rt-content, #sbo-rt-content p, #sbo-rt-content div { font-family: <%= font_family %> !important; }"></style><style type="text/css" id="column-width" data-template="#sbo-rt-content { max-width: <%= column_width %>% !important; margin: 0 auto !important; }"></style><noscript><meta http-equiv="refresh" content="0; url=/library/no-js/" /></noscript><script>
+    var dataLayer = window.dataLayer || [];
+
+    
+      window.medalliaVsgUserIdentifier = '8778dade-aeed-4320-893c-d28b645a62b7';
+      dataLayer.push({userIdentifier: '8778dade-aeed-4320-893c-d28b645a62b7'});
+      dataLayer.push({loggedIn: 'yes'});
+
+      
+        window.medalliaVsgAccountIdentifier = 'dc635f87-41b9-4c9e-80f5-2296e3b5b566';
+        
+
+        window.medalliaVsgIsIndividual = true;
+        
+          
+          dataLayer.push({learningAccountType: 'individual'});
+          
+        
+
+        
+          dataLayer.push({learningPaidAccount: 'yes'});
+        
+      
+    
+
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5P4V6Z');
+    (function () {
+      var VERSION = 'V1.1';
+      var AUTHOR = 'Awwad';
+      if (!window.GtmHelper)
+        window.GtmHelper = function () {
+          var instance = this;
+          var loc = document.location;
+          this.version = VERSION;
+          this.author = AUTHOR;
+          this.readCookie = function (name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+              var c = ca[i];
+              while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+              if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+          };
+          this.createCookie = function (name, value, days, cookieDomain) {
+            var domain = "";
+            var expires = "";
+
+            if (days) {
+              var date = new Date();
+              date.setTime(date.getTime() + Math.ceil(days * 24 * 60 * 60 * 1000));
+              var expires = " expires=" + date.toGMTString() + ";";
+            }
+
+            if (typeof (cookieDomain) != 'undefined')
+              domain = " domain=" + cookieDomain + "; ";
+
+            document.cookie = name + "=" + value + ";" + expires + domain + "path=/";
+          };
+
+          this.isDuplicated = function (currentTransactionId) {
+            // the previous transaction id:
+            var previousTransIdValue = this.readCookie("previousTransId");
+
+            if (currentTransactionId === previousTransIdValue) {
+              return true; // Duplication
+            } else {
+              return false;
+            }
+          };
+        }
+    })()
+  </script><script defer src="/static/js/build/vendor.3eecedff6f59.js"></script><script defer src="/static/js/build/reader.04601a48277a.js"></script></head>
+
+
+<body class="reading sidenav nav-collapsed  scalefonts">
+
+    
+  <noscript> 
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-5P4V6Z"
+            height="0" width="0"
+            style="display:none;visibility:hidden">
+    </iframe>
+  </noscript>
+
+
+
+    
+      <div class="hide working" role="status">
+        <div class="working-image"></div>
+      </div>
+      <div class="sbo-site-nav">
+        
+
+  
+
+
+<a href="#container" class="skip">Skip to content</a><header class="topbar t-topbar"><nav role="navigation" class="js-site-nav"><ul class="topnav"><li><a href="/home/" class="l0 nav-icn"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M11.738 14H9.254v-3.676a.617.617 0 0 0-.621-.613H7.39a.617.617 0 0 0-.62.613V14H4.284a.617.617 0 0 1-.622-.613V10.22c0-.327.132-.64.367-.87l3.547-3.493a.627.627 0 0 1 .875 0l3.54 3.499c.234.229.366.54.367.864v3.167a.617.617 0 0 1-.62.613zM7.57 2.181a.625.625 0 0 1 .882 0l5.77 5.692-.93.92-5.28-5.209-5.28 5.208-.932-.919 5.77-5.692z" /></svg><span>Home</span></a></li><li class="search"><a href="#" class="t-search-nav trigger nav-icn l0" data-dropdown-selector=".searchbox"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="20" height="20" version="1.1" fill="#4A3C31"><desc>search icon</desc><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M31.3 0C20.9 0 12.5 8.4 12.5 18.8 12.5 22.5 13.6 25.9 15.4 28.8L1.2 42.9C-0.4 44.5-0.4 47.2 1.2 48.8 2 49.6 3.1 50 4.2 50 5.2 50 6.3 49.6 7.1 48.8L21.2 34.6C24.1 36.5 27.5 37.5 31.3 37.5 41.6 37.5 50 29.1 50 18.8 50 8.4 41.6 0 31.3 0ZM31.3 31.3C24.4 31.3 18.8 25.6 18.8 18.8 18.8 11.9 24.4 6.3 31.3 6.3 38.1 6.3 43.8 11.9 43.8 18.8 43.8 25.6 38.1 31.3 31.3 31.3Z"/></g></svg><span>Search</span></a></li><li class="usermenu dropdown"><a href="#" class="trigger l0 nav-icn nav-dropdown"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20" version="1.1" fill="#4A3C31"><desc>navigation arrow</desc><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M0.1 12.5L9.7 3.1C9.8 3 9.9 3 10 3 10.1 3 10.2 3 10.3 3.1L19.9 12.5C20 12.5 20 12.6 20 12.8 20 12.9 20 13 19.9 13L17 15.9C16.9 16 16.8 16 16.7 16 16.5 16 16.4 16 16.4 15.9L10 9.7 3.6 15.9C3.6 16 3.5 16 3.3 16 3.2 16 3.1 16 3 15.9L0.1 13C0 12.9 0 12.8 0 12.7 0 12.7 0 12.6 0.1 12.5Z"/></g></svg><span>Expand Nav</span></a><div class="drop-content"><ul><li class="flyout-parent"><a
+                href="#"
+                class="l1 nav-icn "
+                
+              ><?xml version="1.0" encoding="UTF-8"?><svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M8,8 C6.34321755,8 5.00013,6.65691245 5.00013,5.00013 C5.00013,3.34334755 6.34321755,2.00026001 8,2.00026001 C9.65678245,2.00026001 10.99987,3.34334755 10.99987,5.00013 C10.99987,6.65691245 9.65678245,8 8,8 Z M2.33024571,11.3523547 L2.33774538,11.3523547 C3.7622187,9.70968996 5.82947484,8.76608166 8.00374984,8.76608166 C10.1780248,8.76608166 12.245281,9.70968996 13.6697543,11.3523547 C13.8892083,11.6177474 14.0062813,11.9530021 13.99974,12.2973138 L13.99974,13.99974 L2.00026001,13.99974 L2.00026001,12.2973138 C1.99371867,11.9530021 2.11079172,11.6177474 2.33024571,11.3523547 Z" id="path-1"></path></svg><span>Your O&#39;Reilly</span></a><ul class="flyout"><li><a
+                    href="/profile/"
+                    class="l2 nav-icn"
+                    
+                  ><span>Profile</span></a></li><li><a
+                    href="/history/"
+                    class="l2 nav-icn"
+                    
+                  ><span>History</span></a></li><li><a
+                    href="/playlists/"
+                    class="l2 nav-icn"
+                    
+                  ><span>Playlists</span></a></li><li><a
+                    href="/u/8778dade-aeed-4320-893c-d28b645a62b7/"
+                    class="l2 nav-icn"
+                    
+                  ><span>Highlights</span></a></li></ul></li><li class="flyout-parent"><a
+                href="#"
+                class="l1 nav-icn "
+                
+              ><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M11.564 2.263l2.172 2.174c.17.168.264.397.264.636V11a.6.6 0 0 1-.6.6h-.6V6.2h-6V2.6a.6.6 0 0 1 .6-.6h3.527c.239 0 .468.095.637.263zM2.6 14a.6.6 0 0 1-.6-.6V6.8a.6.6 0 0 1 .6-.6h1.903a1.2 1.2 0 0 1 .849.352L6.2 7.4H11a.6.6 0 0 1 .6.6v5.4a.6.6 0 0 1-.6.6H2.6zM11 5h1.8L11 3.2V5z" /></svg><span>Featured</span></a><ul class="flyout"><li><a
+                    href="/featured/navigating-21st-century/"
+                    class="l2 nav-icn"
+                    
+                  ><span>Navigating Change</span></a></li><li><a
+                    href="/recommendations/"
+                    class="l2 nav-icn"
+                    
+                  ><span>Recommended</span></a></li></ul></li><li class="flyout-parent"><a
+                href="#"
+                class="l1 nav-icn "
+                
+              ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="20" height="20" version="1.1" fill="#4A3C31"><desc>queue icon</desc><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M25 29.2C25.4 29.2 25.8 29.1 26.1 28.9L48.7 16.8C49.5 16.4 50 15.5 50 14.6 50 13.7 49.5 12.8 48.7 12.4L26.1 0.3C25.4-0.1 24.6-0.1 23.9 0.3L1.3 12.4C0.5 12.8 0 13.7 0 14.6 0 15.5 0.5 16.4 1.3 16.8L23.9 28.9C24.2 29.1 24.6 29.2 25 29.2ZM7.3 14.6L25 5.2 42.7 14.6 25 24 7.3 14.6ZM48.7 22.4L47.7 21.9 25 34.2 2.3 21.9 1.3 22.4C0.5 22.9 0 23.7 0 24.7 0 25.6 0.5 26.5 1.3 26.9L23.9 39.3C24.2 39.5 24.6 39.6 25 39.6 25.4 39.6 25.8 39.5 26.1 39.3L48.7 26.9C49.5 26.5 50 25.6 50 24.7 50 23.7 49.5 22.9 48.7 22.4ZM48.7 32.8L47.7 32.3 25 44.6 2.3 32.3 1.3 32.8C0.5 33.3 0 34.1 0 35.1 0 36 0.5 36.9 1.3 37.3L23.9 49.7C24.2 49.9 24.6 50 25 50 25.4 50 25.8 49.9 26.1 49.7L48.7 37.3C49.5 36.9 50 36 50 35.1 50 34.1 49.5 33.3 48.7 32.8Z"/></g></svg><span>Explore</span></a><ul class="flyout"><li><a
+                    href="/topics/"
+                    class="l2 nav-icn"
+                    
+                  ><span>All Topics</span></a></li><li><a
+                    href="/search/?query=&amp;extended_publisher_data=true&amp;highlight=true&amp;include_assessments=false&amp;include_case_studies=true&amp;include_courses=true&amp;include_orioles=true&amp;include_playlists=true&amp;include_collections=true&amp;include_notebooks=true&amp;is_academic_institution_account=false&amp;source=user&amp;formats=book&amp;sort=publication_date&amp;facet_json=true&amp;page=0"
+                    class="l2 nav-icn"
+                    
+                  ><span>Early Releases</span></a></li><li><a
+                    href="/playlists/discover/"
+                    class="l2 nav-icn"
+                    
+                  ><span>Shared Playlists</span></a></li><li><a
+                    href="/search/?query=&amp;extended_publisher_data=true&amp;highlight=true&amp;include_assessments=false&amp;include_case_studies=true&amp;include_courses=true&amp;include_orioles=true&amp;include_playlists=true&amp;include_collections=true&amp;include_notebooks=true&amp;is_academic_institution_account=false&amp;source=user&amp;formats=book&amp;formats=case%20study&amp;formats=learning%20path&amp;formats=live%20online%20training&amp;formats=notebook&amp;formats=oriole&amp;formats=video&amp;sort=popularity&amp;facet_json=true&amp;page=0&amp;collection_type=expert"
+                    class="l2 nav-icn"
+                    
+                  ><span>Most Popular Titles</span></a></li><li><a
+                    href="/resource-centers/"
+                    class="l2 nav-icn"
+                    
+                  ><span>Resource Centers</span></a></li></ul></li><li class="flyout-parent"><a
+                href="#"
+                class="l1 nav-icn "
+                
+              ><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M12.8 3.2A1.2 1.2 0 0 1 14 4.4v8.4a1.2 1.2 0 0 1-1.2 1.2H3.2A1.2 1.2 0 0 1 2 12.8V4.4a1.2 1.2 0 0 1 1.2-1.2h1.2V2h1.2v1.2h4.8V2h1.2v1.2h1.2zm-9.6 9.6h9.6V6.2H3.2v6.6zM8 9.5a1.35 1.35 0 1 1 0-2.7 1.35 1.35 0 0 1 0 2.7zm2.7 2.148v.552H5.3v-.552c0-.321.124-.634.355-.858a3.358 3.358 0 0 1 4.69 0c.23.224.355.537.355.858z" /></svg><span>Attend</span></a><ul class="flyout"><li><a
+                    href="/live-training/"
+                    class="l2 nav-icn"
+                    
+                  ><span>Live Trainings</span></a></li><li><a
+                    href="/featured/architectural-katas"
+                    class="l2 nav-icn"
+                    
+                  ><span>Architectural Katas</span></a></li><li><a
+                    href="/featured/strata/"
+                    class="l2 nav-icn"
+                    
+                  ><span>Strata</span></a></li><li><a
+                    href="/featured/oscon/"
+                    class="l2 nav-icn"
+                    
+                  ><span>Open Source</span></a></li><li><a
+                    href="/featured/infrastructure-ops/"
+                    class="l2 nav-icn"
+                    
+                  ><span>Infra &amp; Ops</span></a></li><li><a
+                    href="/featured/software-architecture/"
+                    class="l2 nav-icn"
+                    
+                  ><span>Software Arch</span></a></li></ul></li><li class="flyout-parent"><a
+                href="#"
+                class="l1 nav-icn "
+                
+              ><svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M11.6467109,4.35328907 L14.7964612,7.51003884 C15.0678463,7.78304342 15.0678463,8.22395603 14.7964612,8.49696061 L11.6467109,11.6467109 L10.6597892,10.6597892 L13.3055794,8 L10.6597892,5.34021084 L11.6467109,4.35328907 Z M4.35328907,11.6467109 L1.20353875,8.48996116 C0.932153749,8.21695658 0.932153749,7.77604397 1.20353875,7.50303939 L4.35328907,4.35328907 L5.34021084,5.34021084 L2.69442057,8 L5.34021084,10.6597892 L4.35328907,11.6467109 Z M5.84417089,11.4997226 L8.67194674,4.50027742 L10.1838269,4.50027742 L7.35605105,11.4997226 L5.84417089,11.4997226 Z" id="Mask"></path></svg><span>Interact</span></a><ul class="flyout"><li><a
+                    href="/scenarios/?classification=content-scenario"
+                    class="l2 nav-icn"
+                    
+                  ><span>Scenarios</span></a></li><li><a
+                    href="/scenarios/?classification=sandbox-scenario"
+                    class="l2 nav-icn"
+                    
+                  ><span>Sandboxes</span></a></li><li><a
+                    href="/interactive/?classification=jupyter-notebook"
+                    class="l2 nav-icn"
+                    
+                  ><span>Jupyter Notebooks</span></a></li></ul></li><li ><a
+                href="/answers/"
+                class="l1 nav-icn "
+                
+              ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M2.31032699,3.75609006 C4.65421571,1.41371359 8.45302454,1.41472092 10.7955702,3.75860838 C13.1381158,6.10249583 13.1369405,9.90130261 10.7930518,12.243847 C8.44916311,14.5863913 4.65018639,14.5852161 2.30780867,12.2413286 C-0.0346204845,9.89749489 -0.0334929936,6.09853298 2.31032699,3.75609006 Z M8.8198605,4.98016308 C7.34193969,3.86924672 5.23410194,3.98609692 3.88914868,5.33104946 C3.12814393,6.09032122 2.72818176,7.13880077 2.79015179,8.21201133 C2.79115912,8.23064692 2.79233434,8.24928252 2.79350956,8.26791811 L2.79350956,8.26791811 C2.83179539,8.8307976 2.9944077,9.37404287 3.26947292,9.86201677 L3.26947292,9.86201677 L2.77621706,11.7027432 C2.7699968,11.7259241 2.77662063,11.7506624 2.79359185,11.7676337 C2.8105631,11.7846049 2.83530144,11.7912287 2.85848233,11.7850085 L2.85848233,11.7850085 L4.69400524,11.2922565 C5.26306363,11.6167344 5.90703177,11.786885 6.56209849,11.7858479 C8.64827865,11.7858479 10.3395879,10.094542 10.3395879,8.00836292 C10.3405204,6.84135608 9.80105674,5.73967784 8.87862141,5.02482134 L8.87862141,5.02482134 L8.82825492,4.98654283 Z M13.7933062,2 C14.7073496,2.00009863 15.4482759,2.74110484 15.4482759,3.65514822 C15.4482759,4.32460943 15.0449926,4.92814782 14.4264842,5.18432286 C13.8079757,5.44049789 13.096053,5.29885769 12.6226979,4.82545158 C12.1493429,4.35204547 12.0077795,3.64010743 12.2640213,3.02162665 C12.5202631,2.40314587 13.123845,1.99992776 13.7933062,2 Z"/></svg><span>Answers</span></a></li><li ><a
+                href="/certifications/"
+                class="l1 nav-icn "
+                
+              ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M12.912 9.18L14 8.014l-1.088-1.18a.304.304 0 01-.075-.268L13.195 5l-1.535-.463a.313.313 0 01-.194-.194l-.462-1.537-1.565.358c-.09.03-.194 0-.269-.074L8.007 2 6.845 3.09a.303.303 0 01-.269.074l-1.565-.358-.462 1.537a.313.313 0 01-.194.194L2.82 5l.358 1.567a.26.26 0 01-.075.269L2 8.015l1.088 1.164c.075.075.09.18.075.269l-.358 1.567 1.535.463c.09.03.164.104.194.194l.462 1.537 1.565-.358c.015 0 .045-.015.075-.015.075 0 .15.03.209.074L8.007 14l1.163-1.09a.303.303 0 01.269-.074l1.565.358.462-1.537a.313.313 0 01.194-.194L13.195 11l-.358-1.567a.338.338 0 01.075-.254zm-6.046 1.37L4.41 8.26l1.16-1.244 1.767 1.649L10.4 5.6l1.202 1.202-4.242 4.243-.495-.495z"/></svg><span>Certifications</span></a></li><li ><a
+                href="/preferences/"
+                class="l1 nav-icn "
+                
+              ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 53" width="20" height="20" version="1.1" fill="#4A3C31"><desc>settings icon</desc><g stroke="none" stroke-width="1" fill-rule="evenodd"><path d="M44.6 29.6C44.7 28.6 44.8 27.5 44.8 26.5 44.8 25.5 44.7 24.4 44.6 23.4L49.6 19C50 18.8 50.1 18.3 49.9 17.9 48.9 14.7 47.1 11.7 44.9 9.1 44.6 8.8 44.2 8.7 43.8 8.8L37.4 11.1C35.8 9.8 34 8.7 32.1 8L30.9 1.4C30.8 0.9 30.4 0.6 30 0.5 26.7-0.2 23.3-0.2 20 0.5 19.6 0.6 19.2 0.9 19.1 1.4L17.9 8C16 8.7 14.1 9.8 12.6 11.1L6.2 8.8C5.8 8.7 5.4 8.8 5.1 9.1 2.9 11.7 1.1 14.7 0.1 17.9 -0.1 18.3 0 18.8 0.4 19L5.4 23.4C5.3 24.4 5.2 25.5 5.2 26.5 5.2 27.5 5.3 28.6 5.4 29.6L0.4 34C0 34.2-0.1 34.7 0.1 35.1 1.1 38.3 2.9 41.4 5.1 43.9 5.4 44.2 5.8 44.4 6.2 44.2L12.6 42C14.1 43.2 16 44.3 17.9 45L19.1 51.7C19.2 52.1 19.6 52.5 20 52.5 21.6 52.8 23.3 53 25 53 26.7 53 28.4 52.8 30 52.5 30.4 52.5 30.8 52.1 30.9 51.7L32.1 45C34 44.3 35.8 43.2 37.4 42L43.8 44.2C44.2 44.4 44.6 44.2 44.9 43.9 47.1 41.4 48.9 38.3 49.9 35.1 50.1 34.7 50 34.2 49.6 34L44.6 29.6ZM25 36.4C19.6 36.4 15.2 32 15.2 26.5 15.2 21 19.6 16.6 25 16.6 30.4 16.6 34.8 21 34.8 26.5 34.8 32 30.4 36.4 25 36.4Z"/></g></svg><span>Settings</span></a></li><li ><a
+                href="/public/support/"
+                class="l1 nav-icn "
+                
+              ><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M7.363 6.656a2.692 2.692 0 0 1-2.681-2.703c0-1.493 1.2-2.703 2.681-2.703a2.692 2.692 0 0 1 2.682 2.703c0 1.493-1.2 2.703-2.682 2.703zm4.023 2.027c-1.852 0-3.352 1.513-3.352 3.379H2v-1.534c-.006-.31.099-.612.295-.852a6.666 6.666 0 0 1 9.09-.993zm-.543.676h1.12v.304c.003.284.16.543.408.676a.766.766 0 0 0 .77 0l.303-.176.556.966-.302.176a.772.772 0 0 0-.362.676v.08a.772.772 0 0 0 .362.677l.302.21-.556.965-.302-.175a.766.766 0 0 0-.771 0 .778.778 0 0 0-.409.675v.352h-1.106v-.372a.778.778 0 0 0-.409-.676.766.766 0 0 0-.77 0l-.303.176-.556-.912.302-.176a.772.772 0 0 0 .362-.676v-.04-.04a.772.772 0 0 0-.362-.676l-.302-.176.556-.966.289.155a.766.766 0 0 0 .77 0 .778.778 0 0 0 .41-.676V9.36zm1.562 2.703c0-.271-.108-.531-.3-.722a1.001 1.001 0 0 0-.72-.292 1.01 1.01 0 0 0-.992 1.023 1.01 1.01 0 0 0 1.01 1.004 1.01 1.01 0 0 0 1.002-1.013z" /></svg><span>Support</span></a></li><li ><a
+                href="https://get.oreilly.com/email-signup.html"
+                class="l1 nav-icn "
+                target=&quot;_blank&quot;
+              ><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M11.564 2.263l2.172 2.174c.17.168.264.397.264.636V11a.6.6 0 0 1-.6.6h-.6V6.2h-6V2.6a.6.6 0 0 1 .6-.6h3.527c.239 0 .468.095.637.263zM2.6 14a.6.6 0 0 1-.6-.6V6.8a.6.6 0 0 1 .6-.6h1.903a1.2 1.2 0 0 1 .849.352L6.2 7.4H11a.6.6 0 0 1 .6.6v5.4a.6.6 0 0 1-.6.6H2.6zM11 5h1.8L11 3.2V5z" /></svg><span>Newsletters</span></a></li><li ><a
+                href="/accounts/logout/"
+                class="l1 nav-icn "
+                
+              ><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M2.613 12.63A.607.607 0 0 1 2 12.03V3.602C2 3.269 2.274 3 2.613 3h5.515v1.204H3.226v7.223h4.902v1.203H2.613zM5.677 9.02V6.611h4.903V4.926a.301.301 0 0 1 .19-.274.31.31 0 0 1 .33.063l2.722 2.673a.594.594 0 0 1 0 .849L11.1 10.909a.31.31 0 0 1-.331.063.301.301 0 0 1-.19-.274V9.02H5.677z" /></svg><span>Sign Out</span></a></li></ul></div></li></ul></nav></header>
+
+
+
+      </div>
+      <div id="container" class="application">
+        
+          <div class="nav-container clearfix">
+            
+
+
+            
+            
+          </div>
+
+          
+
+  <div class="js-toc">
+    
+      <div class="sbo-reading-menu sbo-menu-top"><section class="sbo-toc-container toc-menu"><a href="#" class="sbo-toc-thumb"><span class="sbo-title ss-list"><h1><div class="visuallyhidden">Table of Contents for </div>
+      
+      Docker Deep Dive
+      
+    </h1></span></a><div class="toc-contents"></div></section></div>
+
+    
+
+    <div class="interface-controls interface-controls-top">
+      <ul class="interface-control-btns js-bitlist js-reader">
+        <li class="js-search-in-archive search-in-archive t-search-in-archive"><a href="#" title="Search in archive" class="js-search-controls search-controls" onclick="window.Appcues.track('SearchBook_HeronBook')"><span class="icon">Search in book...</span></a><form class="search-archive-bar js-search-form"><input type="search" name="query" placeholder="Search inside this book..." autocomplete="off"></form><div class="search-archive-results"><div class="js-sitb-results-region"></div></div></li><li class="queue-control"><div class="js-content-uri" data-content-uri="/api/v1/book/9781800565135/chapter/chap08.xhtml"><div class="js-collections-dropdown collections-dropdown menu-bit-cards" onclick="window.Appcues.track('AddPlaylist_HeronBook')"></div></div></li><li class="js-font-control-panel font-control-activator"><a href="#" data-push-state="false" id="font-controls" title="Change font size" aria-label="Change font size" onclick="window.Appcues.track('ChangeFont_HeronBook')"><span class="icon">Toggle Font Controls</span></a></li><li class="dropdown sharing-controls"><a href="#" class="trigger" data-push-state="false" title="Share" aria-label="Share" onclick="window.Appcues.track('Share_HeronBook')"><i class="fa fa-share"></i></a><ul class="social-sharing dropdown-menu"><li><a
+        class="twitter share-button t-twitter"
+        target="_blank"
+        aria-label="Share this section on Twitter"
+        title="Share this section on Twitter"
+      
+        href="https://twitter.com/share?url=https://learning.oreilly.com/library/view/docker-deep-dive/9781800565135/chap08.xhtml&text=Docker%20Deep%20Dive&via=OReillyMedia"
+      ><span>Twitter</span></a></li><li><a
+        class="facebook share-button t-facebook"
+        target="_blank"
+        aria-label="Share this section on Facebook"
+        title="Share this section on Facebook"
+        href="https://www.facebook.com/sharer/sharer.php?u=https://learning.oreilly.com/library/view/docker-deep-dive/9781800565135/chap08.xhtml"
+      ><span>Facebook</span></a></li><li><a
+        class="googleplus share-button t-googleplus"
+        target="_blank"
+        aria-label="Share this secton on Google Plus"
+        title="Share this secton on Google Plus"
+        href="https://plus.google.com/share?url=https://learning.oreilly.com/library/view/docker-deep-dive/9781800565135/chap08.xhtml"
+      ><span>Google Plus</span></a></li><li><a
+        class="email share-button t-email"
+        aria-label="Share this section via email"
+        title="Share this section via email"
+      
+        href="mailto:?subject=Safari: 6%3A%20Images&body=https://learning.oreilly.com/library/view/docker-deep-dive/9781800565135/chap08.xhtml%0D%0Afrom Docker%20Deep%20Dive%0D%0A"
+      ><span>Email</span></a></li></ul></li><!-- endif request.user.is_authenticated -->
+      </ul>
+    </div>
+
+      
+          
+      
+
+    <section role="document">
+        
+        
+
+
+
+
+  <script defer src="/static/js/build/djangoMessagesPage.70cc9b5f53ab.js"></script>
+
+
+        <script src="//fast.appcues.com/48743.js"></script>
+<script>
+  var userId = "8778dade-aeed-4320-893c-d28b645a62b7";
+
+  var userObject = {
+    firstName: "Brent",
+    segment: "Paid",
+    admin: "False",
+    profileCreatedOn: "2017-12-29",
+    academic: ""
+  };
+  window.Appcues.identify(userId, userObject);
+  window.Appcues.page();
+
+  setTimeout(function () {
+    window.Appcues.track('ViewingBook_HeronBook')
+  }, 20000);
+</script>
+
+
+	  <div class="t-sbo-prev sbo-prev sbo-nav-top">
+  
+    
+      
+        <a href="/library/view/docker-deep-dive/9781800565135/chap07.xhtml" class="prev nav-link">
+      
+          <span aria-hidden="true" class="pagination-label t-prev-label">Prev</span>
+          <span class="visuallyhidden">Previous Chapter</span>
+          <div class="pagination-title t-prev-title">5: The Docker Engine</div>
+        </a>
+    
+  
+  </div>
+
+  <div class="t-sbo-next sbo-next sbo-nav-top">
+  
+    
+      
+        <a href="/library/view/docker-deep-dive/9781800565135/chap09.xhtml" class="next nav-link">
+      
+          <span aria-hidden="true" class="pagination-label t-next-label">Next</span>
+          <span class="visuallyhidden">Next Chapter</span>
+          <div class="pagination-title t-next-title">7: Containers</div>
+        </a>
+    
+  
+  </div>
+
+
+
+<div id="sbo-rt-content" class="kramdown"><div>
+<h2 id="leanpub-auto-images-1">6: Images</h2>
+
+<p>In this chapter we’ll dive deep into Docker images. The aim of the game is to give you a <strong>solid understanding</strong> of what Docker images are, how to perform basic operations, and how they work under-the-hood. </p>
+
+<p>We’ll see how to build new images with our own applications inside of them in a later chapter.</p>
+
+<p>We’ll split this chapter into the usual three parts:</p>
+
+<ul>
+  <li>The TLDR</li>
+  <li>The deep dive</li>
+  <li>The commands</li>
+</ul>
+
+<h3 id="leanpub-auto-docker-images---the-tldr">Docker images - The TLDR</h3>
+
+<p>A Docker image is a unit of packaging that contains everything required for an application to run. This includes; application code, application dependencies, and OS constructs. If you have an application’s Docker image, the only other thing you need to run that application is a computer running Docker.</p>
+
+<p>If you’re a former VM admin, you can think of Docker images as similar to VM templates. A VM template is like a stopped VM — a Docker image is like a stopped container. If you’re a developer you can think of them as similar to <em>classes</em>.</p>
+
+<p>You get Docker images by <em>pulling</em> them from an image registry. The most common registry is <a href="https://hub.docker.com">Docker Hub</a>, but others exist. The <em>pull</em> operation downloads the image to your local Docker host where Docker can use it to start one or more containers.</p>
+
+<p>Images are made up of multiple <em>layers</em> that are stacked on top of each other and represented as a single object. Inside of the image is a cut-down operating system (OS) and all of the files and dependencies required to run an application. Because containers are intended to be fast and lightweight, images tend to be small (Microsoft images tend to be huge).</p>
+
+<p>Congrats! You now have half a clue what a Docker image is :-D  Now it’s time to blow your mind!</p>
+
+<h3 id="leanpub-auto-docker-images---the-deep-dive">Docker images - The deep dive</h3>
+
+<p>We’ve mentioned a couple of times already that <strong>images</strong> are like stopped containers (or <strong>classes</strong> if you’re a developer). In fact, you can stop a container and create a new image from it. With this in mind, images are considered <em>build-time</em> constructs, whereas containers are <em>run-time</em> constructs.</p>
+
+
+<div class="figure-wrapper center">
+  <figure class="image" style="width: 396px">
+    <img src="/library/view/docker-deep-dive/9781800565135/images/figure6-1.png" alt="Figure 6.1" style="width: 100%" width="3006" height="500">
+    <figcaption>Figure 6.1</figcaption>
+  </figure>
+</div>
+
+
+<h4 id="leanpub-auto-images-and-containers">Images and containers</h4>
+
+<p>Figure 6.1 shows high-level view of the relationship between images and containers. We use the <code>docker container run</code> and <code>docker service create</code> commands to start one or more containers from a single image. Once you’ve started a container from an image, the two constructs become dependent on each other and you cannot delete the image until the last container using it has been stopped and destroyed. Attempting to delete an image without stopping and destroying all containers using it will result in an error.</p>
+
+<h4 id="leanpub-auto-images-are-usually-small">Images are usually small</h4>
+
+<p>The whole purpose of a container is to run a single application or service. This means it only needs the code and dependencies of the app/service it is running — it does not need anything else. This results in small images stripped of all non-essential parts.</p>
+
+<p>For example, Docker images do not ship with 6 different shells for you to choose from. In fact, many application images ship without a shell – if the application doesn’t need a shell to run it doesn’t need to be included in the image. General purpose images such as busybox and Ubuntu ship with a shell, but when you package your business applications for production, you will probably package them without a shell.</p>
+
+<p>Image also don’t contain a kernel — all containers running on a Docker host share access to the host’s kernel. For these reasons, we sometimes say images contain <em>just enough operating system</em> (usually just OS-related files and filesystem objects).</p>
+
+<blockquote>
+  <p><strong>Note:</strong> Hyper-V containers run a single container inside of a dedicated lightweight VM. The container leverages the kernel of the OS running inside the VM.</p>
+</blockquote>
+
+<p>The official <em>Alpine Linux</em> Docker image is about 5MB in size and is an extreme example of how small Docker images can be. That’s not a typo! It really is about 5 megabytes! Some images are even smaller, however, a more typical example might be something like the official Ubuntu Docker image which is currently about 40MB. These are clearly stripped of most non-essential parts!</p>
+
+<p>Windows-based images tend to be a lot bigger than Linux-based images because of the way that the Windows OS works. It’s not uncommon for Windows images to be several gigabytes and take a long time to pull.</p>
+
+<h4 id="leanpub-auto-pulling-images">Pulling images</h4>
+
+<p>A cleanly installed Docker host has no images in its local repository.</p>
+
+<p>The local image repository on a Linux-based Docker host is usually located at <code>/var/lib/docker/&lt;storage-driver&gt;</code>. On Windows-based Docker hosts this is <code>C:\ProgramData\docker\windowsfilter</code>. If you’re using Docker on your Mac or PC with Docker Desktop, everything runs inside of a VM.</p>
+
+<p>You can use the following command to check if your Docker host has any images in its local repository.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker image ls
+REPOSITORY  TAG      IMAGE ID       CREATED         SIZE
+</pre></div>
+
+</figure>
+
+<p>The process of getting images onto a Docker host is called <em>pulling</em>. So, if you want the latest Busybox image on your Docker host, you’d have to <em>pull</em> it. Use the following commands to <em>pull</em> some images and then check their sizes.</p>
+
+<blockquote>
+  <p>If you are following along on Linux and haven’t added your user account to the local <code>docker</code> Unix group, you may need to add <code>sudo</code> to the beginning of all the following commands.</p>
+</blockquote>
+
+<p>Linux example:</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker image pull redis:latest
+latest: Pulling from library/ubuntu
+latest: Pulling from library/redis
+54fec2fa59d0: Already exists 
+9c94e11103d9: Pull complete 
+04ab1bfc453f: Pull complete 
+5f71e6b94d83: Pull complete 
+2729a8234dd5: Pull complete 
+2683d7f17745: Pull complete 
+Digest: sha256:157a9...ad7d28c0f9f
+Status: Downloaded newer image for redis:latest
+docker.io/library/redis:latest
+
+$ docker image pull alpine:latest
+latest: Pulling from library/alpine
+cbdbe7a5bc2a: Pull complete 
+Digest: sha256:9a839e63dad54c3a6d1834e29692c8492d93f90c59c978c1ed79109ea4fb9a54
+Status: Downloaded newer image for alpine:latest
+docker.io/library/alpine:latest
+
+$ docker image ls
+REPOSITORY   TAG     IMAGE ID        CREATED       SIZE
+alpine       latest  f70734b6a266    40 hours ago  5.61MB
+redis        latest  a4d3716dbb72    45 hours ago  98.3MB
+</pre></div>
+
+</figure>
+
+<p>Windows example:</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>&gt; docker image pull mcr.microsoft.com/powershell:latest
+latest: Pulling from powershell
+5b663e3b9104: Pull complete 
+9018627900ee: Pull complete     
+133ab280ee0f: Pull complete    
+084853899645: Pull complete  
+399a2a3857ed: Pull complete   
+6c1c6d29a559: Pull complete  
+d1495ba41b1c: Pull complete  
+190bd9d6eb96: Pull complete  
+7c239384fec8: Pull complete    
+21aee845547a: Pull complete  
+f951bda9026b: Pull complete  
+Digest: sha256:fbc9555...123f3bd7
+Status: Downloaded newer image for mcr.microsoft.com/powershell:latest
+mcr.microsoft.com/powershell:latest
+
+&gt; docker image ls
+REPOSITORY                      TAG      IMAGE ID       CREATED      SIZE
+mcr.microsoft.com/powershell    latest   73175ce91dff   2 days ago   495MB
+mcr.microsoft.com/.../iis       latest   6e5c6561c432   3 days ago   5.05GB
+</pre></div>
+
+</figure>
+
+<p>As you can see, the images just pulled are now present in the Docker host’s local repository. You can also see that the Windows images are a lot larger and comprise many more layers.</p>
+
+<h4 id="leanpub-auto-image-naming">Image naming</h4>
+
+<p>As part of each command, we had to specify which image to pull. Let’s take a minute to look at image naming. To do that we need a bit of background on how images are stored.</p>
+
+<h4 id="leanpub-auto-image-registries">Image registries</h4>
+
+<p>We store images in centralised places called <em>image registries</em>. This makes it easy to share and access them. </p>
+
+<p>The most common registry is Docker Hub (https://hub.docker.com). Other registries exist, including 3rd party registries and secure on-premises registries. However, the Docker client is opinionated and defaults to using Docker Hub. We’ll be using Docker Hub for the rest of the book.</p>
+
+<p>The output of the following command is snipped, but you can see that Docker is configured to use <code>https://index.docker.io/v1/</code> as its default registry when pushing and pulling images (this actually redirects to <code>v2</code>).</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker info
+Server:
+ Containers: 22
+ ...
+ containerd version: 7ad184331fa3e55e52b890ea95e65ba581ae3429
+ runc version: dc9208a3303feef5b3839f4323d9beb36df0a9dd
+ Docker Root Dir: /var/lib/docker
+ ...
+ Registry: https://index.docker.io/v1/
+ ...
+</pre></div>
+
+</figure>
+
+<p>Image registries contain one or more <em>image repositories</em>. In turn, image repositories contain one or more images. That might be a bit confusing, so Figure 6.2 shows a picture of an image registry with 3 repositories, and each repository has one or more images.</p>
+
+
+<div class="figure-wrapper center">
+  <figure class="image" style="width: 396px">
+    <img src="/library/view/docker-deep-dive/9781800565135/images/figure6-2.png" alt="Figure 6.2" style="width: 100%" width="2992" height="1397">
+    <figcaption>Figure 6.2</figcaption>
+  </figure>
+</div>
+
+
+<h5 id="leanpub-auto-official-and-unofficial-repositories">Official and unofficial repositories</h5>
+
+<p>Docker Hub has the concept of <em>official repositories</em> and <em>unofficial repositories</em>.</p>
+
+<p>As the name suggests, <em>official repositories</em> are the home to images that have been vetted and curated by Docker, Inc. This means they should contain up-to-date, high-quality code, that is secure, well-documented, and in-line with best practices.</p>
+
+<p><em>Unofficial repositories</em> can be like the wild-west — you should not assume they are safe, well-documented or built according to best practices. That’s not saying everything in <em>unofficial repositories</em> is bad. There’s some excellent stuff in <em>unofficial repositories</em>. You just need to be very careful before trusting code from them. To be honest, you should always be careful when trusting software from the internet — even images from <em>official repositories.</em></p>
+
+<p>Most of the popular applications and base operating systems have their own <em>official repositories</em> on Docker Hub. They’re easy to spot because they live at the top level of the Docker Hub namespace. The following list contains a few of the <em>official repositories</em>, and shows their URLs that exist at the top-level of the Docker Hub namespace:</p>
+
+<ul>
+  <li>
+<strong>nginx:</strong> https://hub.docker.com/_/nginx/</li>
+  <li>
+<strong>busybox:</strong> https://hub.docker.com/_/busybox/</li>
+  <li>
+<strong>redis:</strong> https://hub.docker.com/_/redis/</li>
+  <li>
+<strong>mongo:</strong> https://hub.docker.com/_/mongo/</li>
+</ul>
+
+<p>On the other hand, my own personal images live in the wild west of <em>unofficial repositories</em> and should <strong>not</strong> be trusted. Here are some examples of images in my repositories:</p>
+
+<ul>
+  <li>nigelpoulton/tu-demo — https://hub.docker.com/r/nigelpoulton/tu-demo/</li>
+  <li>nigelpoulton/pluralsight-docker-ci — https://hub.docker.com/r/nigelpoulton/pluralsight-docker-ci/</li>
+</ul>
+
+<p>Not only are images in my repositories <strong>not</strong> vetted, <strong>not</strong> kept up-to-date, <strong>not</strong> secure, and <strong>not</strong> well documented… they also don’t live at the top-level of the Docker Hub namespace. My repositories all live within the <code>nigelpoulton</code> second-level namespace.</p>
+
+<p>You’ll probably notice that the Microsoft images we’ve used do not exist at the top-level of the Docker Hub namespace. At the time of writing, they exist under the official <code>mcr.microsoft.com</code> second-level namespace. This is due to legal reasons requiring them to be hosted outside of Docker Hub. However, they are integrated into the Docker Hub namespace to make the experience of pulling them as seamless as possible.</p>
+
+<p>After all of that, we can finally look at how we address images on the Docker command line.</p>
+
+<h4 id="leanpub-auto-image-naming-and-tagging">Image naming and tagging</h4>
+
+<p>Addressing images from official repositories is as simple as providing the repository name and tag separated by a colon (<code>:</code>). The format for <code>docker image pull</code>, when working with an image from an official repository is:</p>
+
+<p>
+  <code>$ docker image pull &lt;repository&gt;:&lt;tag&gt;</code>
+</p>
+
+<p>In the Linux examples from earlier, we pulled an Alpine and a Redis image with the following two commands:</p>
+
+<p><code>$ docker image pull alpine:latest</code> and <code>docker image pull redis:latest</code></p>
+
+<p>These two commands pull the images tagged as “latest” from the top-level “alpine” and “redis” repositories.</p>
+
+<p>The following examples show how to pull various different images from <em>official repositories</em>:</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker image pull mongo:4.2.6
+//This will pull the image tagged as `4.2.6` from the official `mongo` repository.
+
+$ docker image pull busybox:latest
+//This will pull the image tagged as `latest` from the official `busybox` repository.
+
+$ docker image pull alpine
+//This will pull the image tagged as `latest` from the official `alpine` repository.
+</pre></div>
+
+</figure>
+
+<p>A couple of points about those commands.</p>
+
+<p>First, if you <strong>do not</strong> specify an image tag after the repository name, Docker will assume you are referring to the image tagged as <code>latest</code>. If the repository doesn’t have an image tagged as <code>latest</code> the command will fail.</p>
+
+<p>Second, the <code>latest</code> tag doesn’t have any magical powers. Just because an image is tagged as <code>latest</code> does not guarantee it is the most recent image in a repository. For example, the most recent image in the <code>alpine</code> repository is usually tagged as <code>edge</code>. Moral of the story — take care when using the <code>latest</code> tag.</p>
+
+<p>Pulling images from an <em>unofficial repository</em> is essentially the same — you just need to prepend the repository name with a Docker Hub username or organization name. The following example shows how to pull the <code>v2</code> image from the <code>tu-demo</code> repository owned by a not-to-be-trusted person whose Docker Hub account name is <code>nigelpoulton</code>.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker image pull nigelpoulton/tu-demo:v2
+//This will pull the image tagged as `v2`
+//from the `tu-demo` repository within the `nigelpoulton` namespace
+</pre></div>
+
+</figure>
+
+<p>In our earlier Windows example, we pulled the PowerShell image with the following command:</p>
+
+<p>
+  <code>&gt; docker image pull mcr.microsoft.com/powershell:latest</code>
+</p>
+
+<p>This pulls the image tagged as <code>latest</code> from the <code>mcr.microsoft.com/powershell</code> repository. </p>
+
+<p>If you want to pull images from 3rd party registries (not Docker Hub), you need to prepend the repository name with the DNS name of the registry. For example, the following command pulls the <code>3.1.5</code> image from the <code>google-containers/git-sync</code> repo on the Google Container Registry (gcr.io).</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker image pull gcr.io/google-containers/git-sync:v3.1.5
+v3.1.5: Pulling from google-containers/git-sync
+597de8ba0c30: Pull complete 
+b263d8e943d1: Pull complete 
+a20ed723abc0: Pull complete 
+49535c7e3a51: Pull complete 
+4a20d0825f07: Pull complete 
+Digest: sha256:f38673f25b8...b5f8f63c4da7cc6
+Status: Downloaded newer image for gcr.io/google-containers/git-sync:v3.1.5
+gcr.io/google-containers/git-sync:v3.1.5
+</pre></div>
+
+</figure>
+
+<p>Notice how the pull experience is exactly the same from Docker Hub and the Google Container Registry.</p>
+
+<h4 id="leanpub-auto-images-with-multiple-tags">Images with multiple tags</h4>
+
+<p>One final word about image tags… A single image can have as many tags as you want. This is because tags are arbitrary alpha-numeric values that are stored as metadata alongside the image. Let’s look at an example.</p>
+
+<p>Pull all of the images in a repository by adding the <code>-a</code> flag to the <code>docker image pull</code> command. Then run <code>docker image ls</code> to look at the images pulled. </p>
+
+<p>It’s probably not a good idea to pull all images from an <code>mcr.microsoft.com</code> repository because Microsoft images can be so large. Also, if the repository you are pulling contains images for multiple architectures and platforms, such as Linux <strong>and</strong> Windows, the command is likely to fail. We recommend you use the command and repository in the following example.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker image pull -a nigelpoulton/tu-demo
+latest: Pulling from nigelpoulton/tu-demo
+aad63a933944: Pull complete 
+f229563217f5: Pull complete 
+&lt;Snip&gt;&gt;
+Digest: sha256:c9f8e18822...6cbb9a74cf
+v1: Pulling from nigelpoulton/tu-demo
+aad63a933944: Already exists 
+f229563217f5: Already exists 
+&lt;Snip&gt; 
+fc669453c5af: Pull complete 
+Digest: sha256:674cb03444...f8598e4d2a
+v2: Pulling from nigelpoulton/tu-demo
+Digest: sha256:c9f8e18822...6cbb9a74cf
+Status: Downloaded newer image for nigelpoulton/tu-demo
+docker.io/nigelpoulton/tu-demo
+
+$ docker image ls
+REPOSITORY             TAG       IMAGE ID       CREATED       SIZE
+nigelpoulton/tu-demo   latest    d5e1e48cf932   2 weeks ago   104MB
+nigelpoulton/tu-demo   v2        d5e1e48cf932   2 weeks ago   104MB
+nigelpoulton/tu-demo   v1        6852022de69d   2 weeks ago   104MB
+</pre></div>
+
+</figure>
+
+<p>A couple of things about what just happened:</p>
+
+<p>First. The command pulled three images from the <code>nigelpoulton/tu-demo</code> repository: <code>latest</code>, <code>v1</code>, and <code>v2</code>.</p>
+
+<p>Second. Look closely at the <code>IMAGE ID</code> column in the output of the <code>docker image ls</code> command. You’ll see that two of the IDs match. This is because two of the tags refer to the same image. Put another way… one of the images has two tags. If you look closely, you’ll see that the <code>v2</code> and <code>latest</code> tags have the same <code>IMAGE ID</code>. This means they’re two tags of the <strong>same image</strong>.</p>
+
+<p>This is a perfect example of the warning issued earlier about the <code>latest</code> tag. In this example, the <code>latest</code> tag refers to the same image as the <code>v2</code> tag. This means it’s pointing to the older of the two images! Moral of the story, <code>latest</code> is an arbitrary tag and is not guaranteed to point to the newest image in a repository!</p>
+
+<h4 id="leanpub-auto-filtering-the-output-of-docker-image-ls">Filtering the output of <code>docker image ls</code>
+</h4>
+
+<p>Docker provides the <code>--filter</code> flag to filter the list of images returned by <code>docker image ls</code>.</p>
+
+<p>The following example will only return dangling images.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker image ls --filter dangling=true
+REPOSITORY    TAG       IMAGE ID       CREATED       SIZE
+&lt;none&gt;        &lt;none&gt;    4fd34165afe0   7 days ago    14.5MB
+</pre></div>
+
+</figure>
+
+<p>A dangling image is an image that is no longer tagged, and appears in listings as <code>&lt;none&gt;:&lt;none&gt;</code>. A common way they occur is when building a new image giving it a tag that already exists. When this happens, Docker will build the new image, notice that an existing image already has the same tag, remove the tag from the existing image and give it to the new image. </p>
+
+<p>Consider this example, you build a new application image based on <code>alpine:3.4</code> and tag it as <code>dodge:challenger</code>. Then you update the image to use <code>alpine:3.5</code> instead of <code>alpine:3.4</code>. When you build the new image, the operation will create a new image tagged as <code>dodge:challenger</code> and remove the tags from the old image. The old image will become a dangling image.</p>
+
+<p>You can delete all dangling images on a system with the <code>docker image prune</code> command. If you add the <code>-a</code> flag, Docker will also remove all unused images (those not in use by any containers).</p>
+
+<p>Docker currently supports the following filters:</p>
+
+<ul>
+  <li>
+<code>dangling:</code> Accepts <code>true</code> or <code>false</code>, and returns only dangling images (true), or non-dangling images (false).</li>
+  <li>
+<code>before:</code> Requires an image name or ID as argument, and returns all images created before it.</li>
+  <li>
+<code>since:</code> Same as above, but returns images created after the specified image.</li>
+  <li>
+<code>label:</code> Filters images based on the presence of a label or label and value. The <code>docker image ls</code> command does not display labels in its output.</li>
+</ul>
+
+<p>For all other filtering you can use <code>reference</code>.</p>
+
+<p>Here’s an example using <code>reference</code> to display only images tagged as “latest”.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker image ls --filter=reference="*:latest"
+REPOSITORY   TAG      IMAGE ID        CREATED        SIZE
+alpine       latest   f70734b6a266    3 days ago     5.61MB
+redis        latest   a4d3716dbb72    3 days ago     98.3MB
+busybox      latest   be5888e67be6    12 days ago    1.22MB
+</pre></div>
+
+</figure>
+
+<p>You can also use the <code>--format</code> flag to format output using Go templates. For example, the following command will only return the size property of images on a Docker host.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker image ls --format "{{.Size}}"
+5.61MB
+98.3MB
+1.22MB
+</pre></div>
+
+</figure>
+
+<p>Use the following command to return all images, but only display repo, tag and size.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker image ls --format "{{.Repository}}: {{.Tag}}: {{.Size}}"
+alpine:  latest: 5.61MB
+redis:   latest: 98.3MB
+busybox: latest: 1.22MB
+</pre></div>
+
+</figure>
+
+<p>If you need more powerful filtering, you can always use the tools provided by your OS and shell such as <code>grep</code> and <code>awk</code>.</p>
+
+<h4 id="leanpub-auto-searching-docker-hub-from-the-cli">Searching Docker Hub from the CLI</h4>
+
+<p>The <code>docker search</code> command lets you search Docker Hub from the CLI. This has limited value as you can only pattern-match against strings in the “NAME” field. However, you can filter output based on any of the returned columns.</p>
+
+<p>In its simplest form, it searches for all repos containing a certain string in the “NAME” field. For example, the following command searches for all repos with “nigelpoulton” in the “NAME” field.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker search nigelpoulton
+NAME                         DESCRIPTION               STARS   AUTOMATED
+nigelpoulton/pluralsight..   Web app used in...        22       [OK]
+nigelpoulton/tu-demo                                   12
+nigelpoulton/k8sbook         Kubernetes Book web app   2
+nigelpoulton/workshop101     Kubernetes 101 Workshop   0                                       
+&lt;Snip&gt;
+</pre></div>
+
+</figure>
+
+<p>The “NAME” field is the repository name. This includes the Docker ID, or organization name, for unofficial repositories. For example, the following command will list all repositories that include the string “alpine” in the name.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker search alpine
+NAME                   DESCRIPTION          STARS    OFFICIAL    AUTOMATED
+alpine                 A minimal Docker..   6386     [OK]
+mhart/alpine-node      Minimal Node.js..    465
+anapsix/alpine-java    Oracle Java 8...     442                  [OK]
+&lt;Snip&gt;
+</pre></div>
+
+</figure>
+
+<p>Notice how some of the repositories returned are official and some are unofficial. You can use <code>--filter "is-official=true"</code> so that only official repos are displayed.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker search alpine --filter "is-official=true"
+NAME                   DESCRIPTION          STARS    OFFICIAL    AUTOMATED
+alpine                 A minimal Docker..   6386     [OK]
+</pre></div>
+
+</figure>
+
+<p>You can do the same again, but this time only show repos with automated builds.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker search alpine --filter "is-automated=true"
+NAME                       DESCRIPTION               OFFICIAL     AUTOMATED
+anapsix/alpine-java        Oracle Java 8 (and 7)..                [OK]
+frolvlad/alpine-glibc      Alpine Docker image..                  [OK]
+alpine/git                 A simple git container..               [OK]                                \
+     
+&lt;Snip&gt;
+</pre></div>
+
+</figure>
+
+<p>One last thing about <code>docker search</code>. By default, Docker will only display 25 lines of results. However, you can use the <code>--limit</code> flag to increase that to a maximum of 100.</p>
+
+<h4 id="leanpub-auto-images-and-layers">Images and layers</h4>
+
+<p>A Docker image is just a bunch of loosely-connected read-only layers, with each layer comprising one or more files. This is shown in Figure 6.3.</p>
+
+
+<div class="figure-wrapper center">
+  <figure class="image" style="width: 396px">
+    <img src="/library/view/docker-deep-dive/9781800565135/images/figure6-3.png" alt="Figure 6.3" style="width: 100%" width="2804" height="1019">
+    <figcaption>Figure 6.3</figcaption>
+  </figure>
+</div>
+
+
+<p>Docker takes care of stacking these layers and representing them as a single unified object.</p>
+
+<p>There are a few ways to see and inspect the layers that make up an image. In fact, we saw one earlier when pulling images. The following example looks closer at an image pull operation.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker image pull ubuntu:latest
+latest: Pulling from library/ubuntu
+952132ac251a: Pull complete
+82659f8f1b76: Pull complete
+c19118ca682d: Pull complete
+8296858250fe: Pull complete
+24e0251a0e2c: Pull complete
+Digest: sha256:f4691c96e6bbaa99d...28ae95a60369c506dd6e6f6ab
+Status: Downloaded newer image for ubuntu:latest
+docker.io/ubuntu:latest
+</pre></div>
+
+</figure>
+
+<p>Each line in the output above that ends with “Pull complete” represents a layer in the image that was pulled. As we can see, this image has 5 layers. Figure 6.4 shows this in picture form with layer IDs.</p>
+
+
+<div class="figure-wrapper center">
+  <figure class="image" style="width: 396px">
+    <img src="/library/view/docker-deep-dive/9781800565135/images/figure6-4.png" alt="Figure 6.4" style="width: 100%" width="2804" height="1019">
+    <figcaption>Figure 6.4</figcaption>
+  </figure>
+</div>
+
+
+<p>Another way to see the layers of an image is to inspect the image with the <code>docker image inspect</code> command. The following example inspects the same <code>ubuntu:latest</code> image.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker image inspect ubuntu:latest
+[
+    {
+        "Id": "sha256:bd3d4369ae.......fa2645f5699037d7d8c6b415a10",
+        "RepoTags": [
+            "ubuntu:latest"
+
+        &lt;Snip&gt;
+
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:c8a75145fc...894129005e461a43875a094b93412",
+                "sha256:c6f2b330b6...7214ed6aac305dd03f70b95cdc610",
+                "sha256:055757a193...3a9565d78962c7f368d5ac5984998",
+                "sha256:4837348061...12695f548406ea77feb5074e195e3",
+                "sha256:0cad5e07ba...4bae4cfc66b376265e16c32a0aae9"
+            ]
+        }
+    }
+]
+</pre></div>
+
+</figure>
+
+<p>The trimmed output shows 5 layers again. Only this time they’re shown using their SHA256 hashes.</p>
+
+<p>The <code>docker image inspect</code> command is a great way to see the details of an image.</p>
+
+<p>The <code>docker history</code> command is another way of inspecting an image and seeing layer data. However, it shows the build history of an image and is <strong>not</strong> a strict list of layers in the final image. For example, some Dockerfile instructions (“ENV”, “EXPOSE”, “CMD”, and “ENTRYPOINT”) add metadata to the image and do not result in permanent layers being created. </p>
+
+<p>All Docker images start with a base layer, and as changes are made and new content is added, new layers are added on top.</p>
+
+<p>Consider the following oversimplified example of building a simple Python application. You might have a corporate policy that all applications are based on the official Ubuntu 20:04 image. This would be your image’s <em>base layer</em>. If you then add the Python package, this will be added as a second layer on top of the base layer. If you later add source code files, these will be added as additional layers. Your final image would have three layers as shown in Figure 6.5 (remember this is an over-simplified example for demonstration purposes).</p>
+
+
+<div class="figure-wrapper center">
+  <figure class="image" style="width: 396px">
+    <img src="/library/view/docker-deep-dive/9781800565135/images/figure6-5.png" alt="Figure 6.5" style="width: 100%" width="2804" height="969">
+    <figcaption>Figure 6.5</figcaption>
+  </figure>
+</div>
+
+
+<p>It’s important to understand that as additional layers are added, the <em>image</em> is always the combination of all layers stacked in the order they were added. Take a simple example of two layers as shown in Figure 6.6. Each <em>layer</em> has 3 files, but the overall <em>image</em> has 6 files as it is the combination of both layers.</p>
+
+
+<div class="figure-wrapper center">
+  <figure class="image" style="width: 396px">
+    <img src="/library/view/docker-deep-dive/9781800565135/images/figure6-6.png" alt="Figure 6.6" style="width: 100%" width="2804" height="790">
+    <figcaption>Figure 6.6</figcaption>
+  </figure>
+</div>
+
+
+<blockquote>
+  <p><strong>Note:</strong> We’ve shown the image layers in Figure 6.6 in a slightly different way to previous figures. This is just to make showing the files easier.</p>
+</blockquote>
+
+<p>In the slightly more complex example of the three-layer image in Figure 6.7, the overall image only presents 6 files in the unified view. This is because <code>File 7</code> in the top layer is an updated version of <code>File 5</code> directly below (inline). In this situation, the file in the higher layer obscures the file directly below it. This allows updated versions of files to be added as new layers to the image.</p>
+
+
+<div class="figure-wrapper center">
+  <figure class="image" style="width: 396px">
+    <img src="/library/view/docker-deep-dive/9781800565135/images/figure6-7.png" alt="Figure 6.7" style="width: 100%" width="2804" height="1040">
+    <figcaption>Figure 6.7</figcaption>
+  </figure>
+</div>
+
+
+<p>Docker employs a storage driver that is responsible for stacking layers and presenting them as a single unified filesystem/image. Examples of storage drivers on Linux include <code>AUFS</code>, <code>overlay2</code>, <code>devicemapper</code>, <code>btrfs</code> and <code>zfs</code>. As their names suggest, each one is based on a Linux filesystem or block-device technology, and each has its own unique performance characteristics. The only driver supported by Docker on Windows is <code>windowsfilter</code>, which implements layering and CoW on top of NTFS.</p>
+
+<p>No matter which storage driver is used, the user experience is the same.</p>
+
+<p>Figure 6.8 shows the same 3-layer image as it will appear to the system. I.e. all three layers stacked and merged, giving a single unified view.</p>
+
+
+<div class="figure-wrapper center">
+  <figure class="image" style="width: 396px">
+    <img src="/library/view/docker-deep-dive/9781800565135/images/figure6-8.png" alt="Figure 6.8" style="width: 100%" width="2804" height="550">
+    <figcaption>Figure 6.8</figcaption>
+  </figure>
+</div>
+
+
+<h4 id="leanpub-auto-sharing-image-layers">Sharing image layers</h4>
+
+<p>Multiple images can, and do, share layers. This leads to efficiencies in space and performance.</p>
+
+<p>Let’s take a second look at the <code>docker image pull</code> command with the <code>-a</code> flag that we ran previously to pull all tagged images in the <code>nigelpoulton/tu-demo</code> repository.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker image pull -a nigelpoulton/tu-demo
+latest: Pulling from nigelpoulton/tu-demo
+aad63a933944: Pull complete 
+f229563217f5: Pull complete 
+&lt;Snip&gt;&gt;
+Digest: sha256:c9f8e18822...6cbb9a74cf
+
+v1: Pulling from nigelpoulton/tu-demo
+aad63a933944: Already exists 
+f229563217f5: Already exists 
+&lt;Snip&gt; 
+fc669453c5af: Pull complete 
+Digest: sha256:674cb03444...f8598e4d2a
+
+v2: Pulling from nigelpoulton/tu-demo
+Digest: sha256:c9f8e18822...6cbb9a74cf
+Status: Downloaded newer image for nigelpoulton/tu-demo
+docker.io/nigelpoulton/tu-demo
+
+$ docker image ls
+REPOSITORY             TAG       IMAGE ID       CREATED       SIZE
+nigelpoulton/tu-demo   latest    d5e1e48cf932   2 weeks ago   104MB
+nigelpoulton/tu-demo   v2        d5e1e48cf932   2 weeks ago   104MB
+nigelpoulton/tu-demo   v1        6852022de69d   2 weeks ago   104MB
+</pre></div>
+
+</figure>
+
+<p>Notice the lines ending in <code>Already exists</code>.</p>
+
+<p>These lines tell us that Docker is smart enough to recognize when it’s being asked to pull an image layer that it already has a local copy of. In this example, Docker pulled the image tagged as <code>latest</code> first. Then, when it pulled the <code>v1</code> and <code>v2</code> images, it noticed that it already had some of the layers that make up those images. This happens because the three images in this repository are almost identical, and therefore share many layers. In fact, the only difference between <code>v1</code> and <code>v2</code> is the top layer.</p>
+
+<p>As mentioned previously, Docker on Linux supports many storage drivers. Each is free to implement image layering, layer sharing, and copy-on-write (CoW) behaviour in its own way. However, the overall result and user experience is essentially the same. Although Windows only supports a single storage driver, that driver provides the same experience as Linux.</p>
+
+<h4 id="leanpub-auto-pulling-images-by-digest">Pulling images by digest</h4>
+
+<p>So far, we’ve shown you how to pull images using their name (tag). This is by far the most common method, but it has a problem — tags are mutable! This means it’s possible to accidentally tag an image with the wrong tag (name). Sometimes, it’s even possible to tag an image with the same tag as an existing, but different, image. This can cause problems!</p>
+
+<p>As an example, imagine you’ve got an image called <code>golftrack:1.5</code> and it has a known bug. You pull the image, apply a fix, and push the updated image back to its repository using the <strong>same tag</strong>.</p>
+
+<p>Take a moment to consider what happened there… You have an image called <code>golftrack:1.5</code> that has a bug. That image is being used by containers in your production environment. You create a new version of the image that includes a fix. Then comes the mistake… you build and push the fixed image back to its repository with the <strong>same tag as the vulnerable image!</strong>. This overwrites the original image and leaves you without a great way of knowing which of your production containers are using the vulnerable image and which are using the fixed image — they both have the same tag!</p>
+
+<p>This is where <em>image digests</em> come to the rescue.</p>
+
+<p>Docker 1.10 introduced a content addressable storage model. As part of this model, all images get a cryptographic <em>content hash</em>. For the purposes of this discussion, we’ll refer to this hash as the <em>digest</em>. As the digest is a hash of the contents of the image, it’s impossible to change the contents of the image without creating a new unique digest. Put another way, you cannot change the content of an image and keep the old digest. This means digests are immutable and provide a solution to the problem we just talked about.</p>
+
+<p>Every time you pull an image, the <code>docker image pull</code> command includes the image’s digest as part of the information returned. You can also view the digests of images in your Docker host’s local repository by adding the <code>--digests</code> flag to the <code>docker image ls</code> command. These are both shown in the following example.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker image pull alpine
+Using default tag: latest
+latest: Pulling from library/alpine
+cbdbe7a5bc2a: Pull complete 
+Digest: sha256:9a839e63da...9ea4fb9a54
+Status: Downloaded newer image for alpine:latest
+docker.io/library/alpine:latest
+
+$ docker image ls --digests alpine
+REPOSITORY  TAG     DIGEST                           IMAGE ID      CREATED     SIZE
+alpine      latest  sha256:9a839e63da...9ea4fb9a54   f70734b6a266  2 days ago  5.61MB
+</pre></div>
+
+</figure>
+
+<p>The snipped output above shows the digest for the <code>alpine</code> image as -</p>
+
+<p>
+  <code>sha256:9a839e63da...9ea4fb9a54</code>
+</p>
+
+<p>Now that we know the digest of the image, we can use it when pulling the image again. This will ensure that we get <strong>exactly the image we expect!</strong></p>
+
+<p>At the time of writing, there is no native Docker command that will retrieve the digest of an image from a remote registry such as Docker Hub. This means the only way to determine the digest of an image is to pull it by tag and then make a note of its digest. This may change in the future.</p>
+
+<p>The following example deletes the <code>alpine:latest</code> image from your Docker host and then shows how to pull it again using its digest instead of its tag. The actual digest is truncated in the book so that it fits on one line. Substitute this for the real digest of the version you pulled on your own system.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker image rm alpine:latest
+Untagged: alpine:latest
+Untagged: alpine@sha256:c0537...7c0a7726c88e2bb7584dc96
+Deleted: sha256:02674b9cb179d...abff0c2bf5ceca5bad72cd9
+Deleted: sha256:e154057080f40...3823bab1be5b86926c6f860
+
+$ docker image pull alpine@sha256:9a839e63da...9ea4fb9a54
+sha256:9a839e63da...9ea4fb9a54: Pulling from library/alpine
+cbdbe7a5bc2a: Pull complete 
+Digest: sha256:9a839e63da...9ea4fb9a54
+Status: Downloaded newer image for alpine@sha256:9a839e63da...9ea4fb9a54
+docker.io/library/alpine@sha256:9a839e63da...9ea4fb9a54
+</pre></div>
+
+</figure>
+
+<h4 id="leanpub-auto-a-little-bit-more-about-image-hashes-digests">A little bit more about image hashes (digests)</h4>
+
+<p>Since Docker version 1.10, an image is a very loose collection of independent layers.</p>
+
+<p>In some ways, the <em>image</em> itself is just a configuration file that lists the layers and some metadata.</p>
+
+<p>The <em>layers</em> are where the data lives (files and code etc.). Each layer is fully independent, and has no concept of being part of an overall bigger image.</p>
+
+<p>Each <em>image</em> is identified by a crypto ID that is a hash of the config file. Each <em>layer</em> is identified by a crypto ID that is a hash of the layer content. we call these “content hashes”.</p>
+
+<p>This means that changing the contents of the image, or any of its layers, will cause the associated crypto hashes to change. As a result, images and layers are immutable, and we can easily identify any changes made to either.</p>
+
+<p>So far, things are pretty simple. But they’re about to get a bit more complicated.</p>
+
+<p>When we push and pull images, we compress their layers to save network bandwidth as well as storage space in the image registry. This is great, but compressed content looks different to uncompressed content. As a result, content hashes no longer match after <code>push</code> or <code>pull</code> operations.</p>
+
+<p>This presents various problems. For example, Docker Hub verifies every pushed layer to make sure it wasn’t tampered with en route. To do this, it runs a hash against the layer content and checks it against the hash that was sent. As the layer was compressed (changed) the hash verification will fail.</p>
+
+<p>To get around this, each layer also gets something called a <em>distribution hash</em>. This is a hash of the compressed version of the layer and is included with every layer pushed or pulled to a registry. This can then be used to verify that the layer arrived without being tampered with.</p>
+
+<p>As well as providing a cryptographically verifiable way to verify image and layer integrity, it also avoids ID collisions that could occur if image and layer IDs were randomly generated.</p>
+
+<h4 id="leanpub-auto-multi-architecture-images">Multi-architecture images</h4>
+
+<p>One of the best things about Docker is its simplicity. However, as technologies grow, things get more complex. This happened for Docker when it started supporting multiple different platforms and architectures such as Windows and Linux, on variations of ARM, x64, PowerPC, and s390x. All of a sudden, popular images had versions for different platforms and architectures. As developers and operators, we had to make sure we were pulling the correct version for the platform and architecture we were using. This broke the smooth Docker experience.</p>
+
+<blockquote>
+  <p><strong>Note:</strong> We’re using the term “architecture” to refer to CPU architecture such as x64 and ARM. We use the term “platform” to refer to either the OS (Linux or Windows) or the combination of OS and architecture.</p>
+</blockquote>
+
+<p>Multi-architecture images to the rescue!</p>
+
+<p>Fortunately, Docker and Docker Hub have a slick way of supporting multi-arch images. This means a single image, such as <code>golang:latest</code>, can have an image for Linux on x64, Linux on PowerPC, Windows x64, Linux on different versions of ARM, and more. To be clear, we’re talking about a single image tag supporting multiple platforms and architectures. We’ll see it in action in a second, but it means you can run a simple <code>docker image pull goloang:latest</code> from any platform or architecture and Docker will pull the correct image for your platform and architecture.</p>
+
+<p>To make this happen, the Registry API supports two important constructs:</p>
+
+<ul>
+  <li><strong>manifest lists</strong></li>
+  <li><strong>manifests</strong></li>
+</ul>
+
+<p>The <strong>manifest list</strong> is exactly what it sounds like: a list of architectures supported by a particular image tag. Each supported architecture then has its own <em>*manifest</em> detailing the layers that make it up.</p>
+
+<p>Figure 6.9 uses the official <code>golang</code> image as an example. On the left is the <strong>manifest list</strong> with entries for each architecture the image supports. The arrows show that each entry in the <strong>manifest list</strong> points to a <strong>manifest</strong> containing image config and layer data.</p>
+
+
+<div class="figure-wrapper center">
+  <figure class="image" style="width: 396px">
+    <img src="/library/view/docker-deep-dive/9781800565135/images/figure6-9.png" alt="Figure 6.9" style="width: 100%" width="2915" height="1314">
+    <figcaption>Figure 6.9</figcaption>
+  </figure>
+</div>
+
+
+<p>Let’s look at the theory before seeing it in action.</p>
+
+<p>Assume you are running Docker on a Raspberry Pi (Linux running on ARM architecture). When you pull an image, your Docker client makes the relevant calls to the Docker Registry API exposed by Docker Hub. If a <strong>manifest list</strong> exists for the image, it will be parsed to see if an entry exists for Linux on ARM. If an ARM entry exists, the <strong>manifest</strong> for that image is retrieved and parsed for the crypto ID’s of the layers that make up the image. Each layer is then pulled from Docker Hub.</p>
+
+<p>The following examples show how this works by starting a new container from the official <code>golang</code> image and running the <code>go version</code> command inside the container. The output of the <code>go version</code> command shows the version of Go as well as the platform and CPU architecture of the container/host. The thing to note, is that both examples use the exact same <code>docker container run</code> command. We do not have to tell Docker that we need the Linux x64 or Windows x64 versions of the image. We just run normal commands and let Docker take care of getting the right image for the platform and architecture we are running!</p>
+
+<p>Linux on x64 example:</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker container run --rm golang go version
+&lt;Snip&gt;
+go version go1.14.2 linux/amd64
+</pre></div>
+
+</figure>
+
+<p>Windows on x64 example:</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>&gt; docker container run --rm golang go version
+&lt;Snip&gt;
+go version go1.14.2 windows/amd64
+</pre></div>
+
+</figure>
+
+<p>The Windows Golang image is currently over 5GB in size and may take a long time to download.</p>
+
+<p>The ‘docker manifest’ command lets you inspect the manifest list of any image on Docker Hub. The following example inspects the manifest list on Docker Hub for the <code>golang</code> image. You can see that Linux and Windows are supported on various CPU architectures. You can run the same command without the <code>grep</code> filter to see the full JSON manifest list.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker manifest inspect golang | grep 'architecture\|os'
+            "architecture": "amd64",
+            "os": "linux"
+            "architecture": "arm",
+            "os": "linux",
+            "architecture": "arm64",
+            "os": "linux",
+            "architecture": "386",
+            "os": "linux"
+            "architecture": "ppc64le",
+            "os": "linux"
+            "architecture": "s390x",
+            "os": "linux"
+            "architecture": "amd64",
+            "os": "windows",
+            "os.version": "10.0.14393.3630"
+            "architecture": "amd64",
+            "os": "windows",
+            "os.version": "10.0.17763.1158"
+</pre></div>
+
+</figure>
+
+<p>All official images have manifest lists.</p>
+
+<p>You can create your own builds for different platforms and architectures with <code>docker buildx</code> and then use <code>docker manifest create</code> to create your own manifest lists.</p>
+
+<p>The following command builds an image for ARMv7 called <code>myimage:arm-v7</code> from the contents of the current directory. It’s based on code in the code in <code>https://github.com/nigelpoulton/psweb</code>.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker buildx build --platform linux/arm/v7 -t myimage:arm-v7 .
+[+] Building 44.4s (10/10) FINISHED                                                                   \
+                                      
+ =&gt; [internal] load build definition from Dockerfile          0.1s
+ =&gt; =&gt; transferring dockerfile: 424B                          0.0s
+ &lt;Snip&gt;
+ =&gt; exporting to image                                        3.2s 
+ =&gt; =&gt; exporting layers                                       3.2s 
+ =&gt; =&gt; writing image sha256:61cc82bdaa...                     0.0s 
+ =&gt; =&gt; naming to docker.io/library/myimage:arm-v7             0.0s 
+</pre></div>
+
+</figure>
+
+<p>The beauty of the command is that you don’t have to run it from an ARMv7 Docker node. In fact, the example shown was ran on Linux on x64 hardware.</p>
+
+<p>At the time of writing, <code>buildx</code> is an experimental feature and requires <code>experimental=true</code> setting in your <code>~/.docker/config.json</code> file as follows.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>{
+  "experimental": true
+}
+</pre></div>
+
+</figure>
+
+<h4 id="leanpub-auto-deleting-images">Deleting Images</h4>
+
+<p>When you no longer need an image on your Docker host, you can delete it with the <code>docker image rm</code> command. <code>rm</code> is short for remove.</p>
+
+<p>Deleting an image will remove the image and all of its layers from your Docker host. This means it will no longer show up in <code>docker image ls</code> commands and all directories on the Docker host containing the layer data will be deleted. However, if an image layer is shared by more than one image, that layer will not be deleted until all images that reference it have been deleted.</p>
+
+<p>Delete the images pulled in the previous steps with the <code>docker image rm</code> command. The following example deletes an image by its ID, this might be different on your system.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker image rm 02674b9cb179
+Untagged: alpine@sha256:c0537ff6a5218...c0a7726c88e2bb7584dc96
+Deleted: sha256:02674b9cb179d57...31ba0abff0c2bf5ceca5bad72cd9
+Deleted: sha256:e154057080f4063...2a0d13823bab1be5b86926c6f860
+</pre></div>
+
+</figure>
+
+<p>You can list multiple images on the same command by separating them with whitespace like the following.</p>
+
+<p>
+  <code>$ docker image rm f70734b6a266 a4d3716dbb72</code>
+</p>
+
+<p>If the image you are trying to delete is in use by a running container you will not be able to delete it. Stop and delete any containers before trying the delete operation again.</p>
+
+<p>A handy shortcut for <strong>deleting all images</strong> on a Docker host is to run the <code>docker image rm</code> command and pass it a list of all image IDs on the system by calling <code>docker image ls</code> with the <code>-q</code> flag. This is shown next.</p>
+
+<p>If you are following along on a Windows system, this will only work in a PowerShell terminal. It will not work on a CMD prompt.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker image rm $(docker image ls -q) -f
+</pre></div>
+
+</figure>
+
+<p>To understand how this works, download a couple of images and then run <code>docker image ls -q</code>.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker image pull alpine
+Using default tag: latest
+latest: Pulling from library/alpine
+e110a4a17941: Pull complete
+Digest: sha256:3dcdb92d7432d5...3626d99b889d0626de158f73a
+Status: Downloaded newer image for alpine:latest
+
+$ docker image pull ubuntu
+Using default tag: latest
+latest: Pulling from library/ubuntu
+952132ac251a: Pull complete
+82659f8f1b76: Pull complete
+c19118ca682d: Pull complete
+8296858250fe: Pull complete
+24e0251a0e2c: Pull complete
+Digest: sha256:f4691c96e6bba...128ae95a60369c506dd6e6f6ab
+Status: Downloaded newer image for ubuntu:latest
+
+$ docker image ls -q
+bd3d4369aebc
+4e38e38c8ce0
+</pre></div>
+
+</figure>
+
+<p>See how <code>docker image ls -q</code> returns a list containing just the image IDs of all images pulled locally on the system. Passing this list to <code>docker image rm</code> will delete all images on the system as shown next.</p>
+
+<figure class="code" dir="ltr">
+<div class="highlight"><pre><code></code>$ docker image rm $(docker image ls -q) -f
+Untagged: ubuntu:latest
+Untagged: ubuntu@sha256:f4691c9...2128ae95a60369c506dd6e6f6ab
+Deleted: sha256:bd3d4369aebc494...fa2645f5699037d7d8c6b415a10
+Deleted: sha256:cd10a3b73e247dd...c3a71fcf5b6c2bb28d4f2e5360b
+Deleted: sha256:4d4de39110cd250...28bfe816393d0f2e0dae82c363a
+Deleted: sha256:6a89826eba8d895...cb0d7dba1ef62409f037c6e608b
+Deleted: sha256:33efada9158c32d...195aa12859239d35e7fe9566056
+Deleted: sha256:c8a75145fcc4e1a...4129005e461a43875a094b93412
+Untagged: alpine:latest
+Untagged: alpine@sha256:3dcdb92...313626d99b889d0626de158f73a
+Deleted: sha256:4e38e38c8ce0b8d...6225e13b0bfe8cfa2321aec4bba
+Deleted: sha256:4fe15f8d0ae69e1...eeeeebb265cd2e328e15c6a869f
+
+$ docker image ls
+REPOSITORY     TAG    IMAGE ID    CREATED     SIZE
+</pre></div>
+
+</figure>
+
+<p>Let’s remind ourselves of the major commands we use to work with Docker images.</p>
+
+<h3 id="leanpub-auto-images---the-commands">Images - The commands</h3>
+
+<ul>
+  <li>
+<code>docker image pull</code> is the command to download images. We pull images from repositories inside of remote registries. By default, images will be pulled from repositories on Docker Hub. This command will pull the image tagged as <code>latest</code> from the <code>alpine</code> repository on Docker Hub: <code>docker image pull alpine:latest</code>.</li>
+  <li>
+<code>docker image ls</code> lists all of the images stored in your Docker host’s local image cache. To see the SHA256 digests of images add the <code>--digests</code> flag.</li>
+  <li>
+<code>docker image inspect</code> is a thing of beauty! It gives you all of the glorious details of an image — layer data and metadata.</li>
+  <li>
+<code>docker manifest inspect</code> allows you to inspect the manifest list of any image stored on Docker Hub. This will show the manifest list for the <code>redis</code> image: <code>docker manifest inspect redis</code>.</li>
+  <li>
+<code>docker buildx</code> is a Docker CLI plugin that extends the Docker CLI to support multi-arch builds.</li>
+  <li>
+<code>docker image rm</code> is the command to delete images. This command shows how to delete the <code>alpine:latest</code> image — <code>docker image rm alpine:latest</code>. You cannot delete an image that is associated with a container in the running (Up) or stopped (Exited) states.</li>
+</ul>
+
+<h3 id="leanpub-auto-chapter-summary-5">Chapter summary</h3>
+
+<p>In this chapter, we learned about Docker images. We learned that they contain everything needed to run an application. This includes; just enough OS, source code files, and dependencies. In some ways, images are like virtual machine templates and are used to start containers. Under the hood they are made up of one or more read-only layers, that when stacked together, make up the overall image.</p>
+
+<p>We used the <code>docker image pull</code> command to pull some images into our Docker host’s local registry.</p>
+
+<p>We covered image naming, official and unofficial repos, layering, sharing, and crypto IDs.</p>
+
+<p>We looked at how Docker supports multi-architecture and multi-platform images, and we finished off by looking at some of the most common commands used to work with images.</p>
+
+<p>In the next chapter we’ll take a similar tour of containers — the runtime sibling of images.</p>
+
+
+
+</div>
+</div>
+
+
+
+  <div class="t-sbo-prev sbo-prev sbo-nav-bottom">
+  
+    
+      
+        <a href="/library/view/docker-deep-dive/9781800565135/chap07.xhtml" class="prev nav-link">
+      
+          <span aria-hidden="true" class="pagination-label t-prev-label">Prev</span>
+          <span class="visuallyhidden">Previous Chapter</span>
+          <div class="pagination-title t-prev-title">5: The Docker Engine</div>
+        </a>
+    
+  
+  </div>
+
+  <div class="t-sbo-next sbo-next sbo-nav-bottom">
+  
+    
+      
+        <a href="/library/view/docker-deep-dive/9781800565135/chap09.xhtml" class="next nav-link">
+      
+          <span aria-hidden="true" class="pagination-label t-next-label">Next</span>
+          <span class="visuallyhidden">Next Chapter</span>
+          <div class="pagination-title t-next-title">7: Containers</div>
+        </a>
+    
+  
+  </div>
+
+
+        
+    </section>
+  </div>
+<section class="sbo-saved-archives"></section>
+
+
+
+          
+          
+  
+
+
+
+
+    
+    
+
+
+
+        
+      </div>
+      
+        
+
+<footer class="pagefoot t-pagefoot">
+  <a href="#" class="icon-up" onclick="window.Appcues.track('JumpTop_HeronBook')"><div class="visuallyhidden">Back to top</div></a>
+  <ul class='js-footer-nav'>
+  
+    
+    <li><a href="/public/support/">Support</a></li>
+    
+    <li><a href="/accounts/logout/">Sign Out</a></li>
+    
+  
+  
+  </ul>
+  <span class="copyright">&#169; 2020 <a href="/" target="_blank">O'Reilly Media, Inc</a>.</span>
+  
+    
+    <a href="https://www.oreilly.com/terms/">Terms of Service</a> 
+     / 
+    
+    <a href="/privacy">Privacy Policy</a> 
+    
+    
+  
+</footer>
+
+      
+    
+    <script src="/jsi18n/web/" charset="utf-8"></script>
+    <script src="/library/jsi18n/appcache/" charset="utf-8"></script>
+  </body>
+</html>
